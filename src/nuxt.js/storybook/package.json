@@ -1,6 +1,9 @@
 {
   "private": true,
   "scripts": {
+    "storybook": "nuxt-ts storybook",
+    "storybook-build": "nuxt-ts storybook build",
+    "storybook-eject": "nuxt-ts storybook eject",
     "dev": "nuxt-ts"
   },
   "dependencies": {
