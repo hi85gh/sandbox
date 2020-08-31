@@ -1,0 +1,30 @@
+{
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hi85gh/sandbox.git"
+  },
+  "scripts": {
+    "format": "prettier --write . --ignore-path .gitignore"
+  },
+  "devDependencies": {
+    "prettier": "2.1.1"
+  },
+  "prettier": {
+    "overrides": [
+      {
+        "files": [
+          "*.js",
+          "*.jsx",
+          "*.ts",
+          "*.tsx",
+          "*.vue"
+        ],
+        "options": {
+          "semi": false,
+          "singleQuote": true
+        }
+      }
+    ]
+  }
+}
