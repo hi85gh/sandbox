@@ -1,2 +1,3 @@
 .nuxt-storybook
-storybook-static
+storybook-static/*
+!storybook-static/.gitkeep
