@@ -1,4 +1,8 @@
 {
+  "files.exclude": {
+    "static/symbolic-links": true
+  },
+  "liveServer.settings.root": "/static",
   "vetur.experimental.templateInterpolationService": true,
   "vetur.format.defaultFormatter.html": "prettier",
   "vetur.validation.template": false, // Avoid Vue 3 error
