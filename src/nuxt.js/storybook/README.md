@@ -59,3 +59,12 @@ $ echo ".nuxt-storybook" >> .gitignore && \
     ```sh
     $ npm install --save-dev core-js@3 @babel/runtime-corejs3
     ```
+  - @nuxtjs/storybook `v2.2.0` で core-js@3, @babel/runtime-corejs3 がインストールされていない場合は以下のエラーが表示
+    ```sh
+     ERROR  Storybook requires core-js@3. Run yarn add --dev core-js@3 @babel/runtime-corejs3
+    ```
+    - [Release v2.2.0 · nuxt-community/storybook](https://github.com/nuxt-community/storybook/releases/tag/v2.2.0)
+    - [fix(webpack): show error when `core-js@3` is missing by farnabaz · Pull Request #111 · nuxt-community/storybook](https://github.com/nuxt-community/storybook/pull/111)
+  - nuxt が `v2.14.0` 以上であっても core-js@3 は必須:
+    > If you are using Nuxt < 2.14.0, you need to use `core-js@3`
+    > (Retrieved from https://storybook.nuxtjs.org/setup/)
