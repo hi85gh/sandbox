@@ -1,0 +1,6 @@
+{
+  "private": true,
+  "dependencies": {
+    "magic-grid": "3.2.4"
+  }
+}
