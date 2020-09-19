@@ -2,7 +2,8 @@
   "private": true,
   "scripts": {
     "dev": "vite serve src",
-    "build": "vite build src --outDir dist"
+    "build": "vite build src --outDir dist",
+    "type-check": "tsc --noEmit"
   },
   "dependencies": {
     "vue": "3.0.0"
