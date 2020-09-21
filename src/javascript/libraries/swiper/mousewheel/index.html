@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="../node_modules/swiper/swiper-bundle.min.css"
+    />
+    <style>
+      body {
+        margin: 15px;
+      }
+
+      .swiper-container {
+        height: calc(100vh - 30px);
+        counter-reset: count;
+      }
+
+      .swiper-slide::before {
+        counter-increment: count;
+        content: counter(count);
+      }
+
+      .swiper-slide:nth-child(odd) {
+        background-color: antiquewhite;
+      }
+
+      .swiper-slide:nth-child(even) {
+        background-color: aliceblue;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"></div>
+        <div class="swiper-slide"></div>
+        <div class="swiper-slide"></div>
+        <div class="swiper-slide"></div>
+        <div class="swiper-slide"></div>
+        <div class="swiper-slide"></div>
+        <div class="swiper-slide"></div>
+        <div class="swiper-slide"></div>
+        <div class="swiper-slide"></div>
+        <div class="swiper-slide"></div>
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+    <script type="module" src="main.js"></script>
+  </body>
+</html>
