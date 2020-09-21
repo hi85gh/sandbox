@@ -1,0 +1,12 @@
+{
+  "private": true,
+  "scripts": {
+    "start": "node dist/main.js",
+    "build": "tsc src/main.ts --outDir dist",
+    "dev": "nodemon"
+  },
+  "devDependencies": {
+    "nodemon": "2.0.4",
+    "typescript": "4.0.3"
+  }
+}
