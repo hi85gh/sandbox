@@ -1,0 +1,6 @@
+{
+  "private": true,
+  "scripts": {
+    "create-empty-file": "node scripts/create-empty-file.mjs"
+  }
+}
