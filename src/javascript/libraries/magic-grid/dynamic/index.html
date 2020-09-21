@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      .magic-grid {
+        counter-reset: count;
+      }
+
+      .magic-grid:empty::before {
+        content: "Loading...";
+        display: block;
+        text-align: center;
+      }
+
+      .magic-grid > div {
+        width: 280px;
+        height: 100px;
+        background-color: antiquewhite;
+      }
+
+      .magic-grid > div::before {
+        counter-increment: count;
+        content: counter(count);
+      }
+
+      .magic-grid > div:nth-child(2n) {
+        height: 200px;
+      }
+
+      .magic-grid > div:nth-child(3n) {
+        height: 300px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="magic-grid"></div>
+    <script type="module" src="main.js"></script>
+  </body>
+</html>

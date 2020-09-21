@@ -1,4 +1,3 @@
 # Magic Grid
 
-- Official:
-  [Repository](https://github.com/e-oj/Magic-Grid)
+- Repository : <https://github.com/e-oj/Magic-Grid>
