@@ -5,7 +5,7 @@
     "url": "git+https://github.com/hi85gh/sandbox.git"
   },
   "scripts": {
-    "format": "prettier --write . --ignore-path .gitignore"
+    "format": "prettier --write ."
   },
   "devDependencies": {
     "prettier": "2.1.1"

@@ -1,0 +1,9 @@
+# Directories
+.nuxt
+.nuxt-storybook
+dist
+static/symbolic-links
+storybook-static
+
+# Files
+package-lock.json
