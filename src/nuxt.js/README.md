@@ -1,5 +1,5 @@
 # Nuxt.js
 
-- Official:
-  [Repository](https://github.com/nuxt/nuxt.js) /
-  [Documentation](https://nuxtjs.org/)
+- Official site: <https://nuxtjs.org/>
+- Repository: <https://github.com/nuxt/nuxt.js>
+- Release notes: <https://nuxtjs.org/guide/release-notes>
