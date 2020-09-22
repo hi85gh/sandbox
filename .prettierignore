@@ -2,8 +2,10 @@
 .nuxt
 .nuxt-storybook
 dist
-static/symbolic-links
 storybook-static
+
+/src/javascript/libraries/blotter.js/materials
+/static/symbolic-links
 
 # Files
 package-lock.json
