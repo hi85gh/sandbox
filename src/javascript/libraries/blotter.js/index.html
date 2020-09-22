@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="./node_modules/blotter.js/build//blotter.min.js"></script>
+    <script src="./materials/channelSplitMaterial.js"></script>
+  </head>
+  <body>
+    <script>
+      const text = new Blotter.Text("Hello, World!", {
+        family: "serif",
+        size: 120,
+        fill: "#171717",
+      });
+
+      const material = new Blotter.ChannelSplitMaterial();
+
+      const blotter = new Blotter(material, { texts: text });
+
+      const scope = blotter.forText(text);
+
+      scope.appendTo(document.body);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,10 @@
+{
+  "private": true,
+  "name": "avoid-postinstall-error",
+  "scripts": {
+    "postinstall": "curl https://codeload.github.com/bradley/Blotter/tar.gz/v0.1.0 | tar -xzo --no-same-permissions --strip=2 Blotter-0.1.0/build/materials"
+  },
+  "dependencies": {
+    "blotter.js": "0.1.0"
+  }
+}
