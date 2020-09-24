@@ -7,7 +7,7 @@
 
 ## Notes
 
-## Extensions
+### Extensions
 
 nodemon がデフォルトで変更を監視するファイルは拡張子が `.js`, `.mjs`, `.coffee`, `.litcoffee`, `.json` のファイルのため、TypeScript のプロジェクトでは対象のファイルを変更する必要がある。
 
