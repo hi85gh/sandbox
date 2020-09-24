@@ -1,0 +1,8 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@baz/*": ["./src/foo/bar/baz/*"]
+    }
+  }
+}
