@@ -1,11 +1,11 @@
 {
   "private": true,
   "scripts": {
+    "dev": "nuxt-ts",
     "storybook": "nuxt-ts storybook",
     "storybook-build": "nuxt-ts storybook build",
     "poststorybook-build": "node --eval \"require('fs').closeSync(require('fs').openSync('storybook-static/.gitkeep', 'w'))\"",
-    "storybook-eject": "nuxt-ts storybook eject",
-    "dev": "nuxt-ts"
+    "storybook-eject": "nuxt-ts storybook eject"
   },
   "dependencies": {
     "@nuxt/typescript-runtime": "2.0.0",

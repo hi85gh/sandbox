@@ -1,9 +1,10 @@
 {
   "private": true,
   "scripts": {
+    "dev": "nodemon",
     "start": "node dist/main.js",
     "build": "tsc src/main.ts --outDir dist",
-    "dev": "nodemon"
+    "prebuild": "node --eval=\"require('fs').rmdirSync('dist', { recursive: true })\""
   },
   "devDependencies": {
     "nodemon": "2.0.4",
