@@ -1,6 +1,6 @@
 <script lang="ts">
 import { defineComponent } from 'vue'
-import AppHeading from './components/AppHeading.vue'
+import AppHeading from './components/AppHeading'
 
 export default defineComponent({
   name: 'App',
@@ -11,5 +11,7 @@ export default defineComponent({
 </script>
 
 <template>
-  <AppHeading tag="h1">AppHeading component</AppHeading>
+  <AppHeading href="#" tag="h1" target="_blank">
+    AppHeading component
+  </AppHeading>
 </template>
