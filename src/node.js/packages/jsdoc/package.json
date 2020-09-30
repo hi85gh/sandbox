@@ -1,0 +1,11 @@
+{
+  "private": true,
+  "scripts": {
+    "test": "jsdoc src/deprecated.mjs",
+    "build": "jsdoc src --recurse --destination dist",
+    "prebuild": "node --eval \"require('fs').rmdirSync('dist', { recursive: true })\""
+  },
+  "devDependencies": {
+    "jsdoc": "3.6.6"
+  }
+}
