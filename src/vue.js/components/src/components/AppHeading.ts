@@ -13,8 +13,7 @@ export default defineComponent({
     href: {
       type: String,
       required: false,
-      validator: (value?: string) =>
-        !!value && /^(https?:\/\/.+|\/.*|#.*)$/.test(value),
+      validator: (value: string) => /^(https?:\/\/.+|\/.*|#.*)$/.test(value),
     },
     tag: {
       type: String as PropType<Tag>,
@@ -24,7 +23,7 @@ export default defineComponent({
     target: {
       type: String as PropType<Target>,
       required: false,
-      validator: (value?: Target) => !!value && targets.includes(value),
+      validator: (value: Target) => targets.includes(value),
     },
   },
   setup(props, { attrs, slots }) {
