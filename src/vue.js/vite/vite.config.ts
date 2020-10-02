@@ -1,6 +1,6 @@
-import { BuildConfig } from 'vite/dist/node/config'
+import { UserConfig } from 'vite/dist/node/config'
 
-const config: BuildConfig = {
+const config: UserConfig = {
   define: {
     /**
      * Disable Options API
