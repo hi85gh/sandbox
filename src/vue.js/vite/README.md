@@ -66,3 +66,14 @@ vite v1.0.0-rc.4
 
 - Vue 3 を使用する場合は Vetur の設定を変更する
   - [Linting / Error Checking | Vetur](https://vuejs.github.io/vetur/linting-error.html#error-checking)
+- `.vue` ファイル内で `alias` を使用して `.ts` ファイルを `import` しようとすると Vetur でエラーが発生
+  ```vue
+  <script lang="ts">
+  import Foo from "/@/Foo.vue"; // OK
+  import { bar } from "/@/bar"; // Cannot find module '/@/bar' or its corresponding type declarations.Vetur(2307)
+  </script>
+  ```
+  - `tsconfig.json` に `compilerOptions.paths` を設定しても Vetur のエラーは解決できない
+  - `.vue` ファイルではなく `.ts` ファイル（`render` 関数）を使用すると問題なし
+  - Vite は問題なく動作する
+  - Vite はデフォルトでプロジェクトの `root` フォルダからのルート相対パスでファイルを `import` できるが、TypeScript（`<script lang="ts">` を設定した `.vue` ファイル）では Vetur のエラーが発生する
