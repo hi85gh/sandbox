@@ -2,6 +2,9 @@ import { resolve } from 'path'
 import { UserConfig } from 'vite/dist/node/config'
 
 const config: UserConfig = {
+  alias: {
+    '/@/': resolve(__dirname, './src'),
+  },
   define: {
     /**
      * Disable Options API

@@ -1,9 +1,13 @@
 {
   "compilerOptions": {
+    "baseUrl": ".",
     "esModuleInterop": true,
     "isolatedModules": true,
     "module": "es2015",
     "moduleResolution": "node",
+    "paths": {
+      "/@/*": ["./src/*"]
+    },
     "skipLibCheck": true,
     "strict": true,
     "target": "es5"
