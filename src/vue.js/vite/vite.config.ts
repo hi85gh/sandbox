@@ -1,3 +1,4 @@
+import { resolve } from 'path'
 import { UserConfig } from 'vite/dist/node/config'
 
 const config: UserConfig = {
@@ -8,6 +9,8 @@ const config: UserConfig = {
      */
     __VUE_OPTIONS_API__: false,
   },
+  outDir: resolve(__dirname, 'dist'),
+  root: resolve(__dirname, 'src'),
 }
 
 export default config

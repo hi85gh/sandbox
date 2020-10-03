@@ -1,8 +1,8 @@
 {
   "private": true,
   "scripts": {
-    "dev": "vite serve src",
-    "build": "vite build src --outDir dist",
+    "dev": "vite serve",
+    "build": "vite build",
     "type-check": "tsc --noEmit"
   },
   "dependencies": {
