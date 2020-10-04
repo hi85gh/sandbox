@@ -9,6 +9,8 @@
     "@pika/react-dom": "16.13.1"
   },
   "devDependencies": {
+    "@types/react": "16.9.50",
+    "@types/react-dom": "16.9.8",
     "vite": "1.0.0-rc.4",
     "vite-plugin-react": "3.0.2"
   }
