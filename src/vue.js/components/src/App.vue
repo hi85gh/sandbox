@@ -13,7 +13,10 @@ export default defineComponent({
   },
   setup() {
     const state = reactive({
-      appInputFieldModelValue: 'Hello, World!',
+      appInputFieldModelValue: '',
+      appInputFieldModelValueLazy: '',
+      appInputFieldModelValueNumber: '',
+      appInputFieldModelValueTrim: '',
       teleported: false,
     })
 
@@ -29,8 +32,40 @@ export default defineComponent({
   </AppHeading>
 
   <!-- AppInputField -->
-  <p>value: {{ appInputFieldModelValue }}</p>
-  <p><AppInputField v-model="appInputFieldModelValue" /></p>
+  <dl>
+    <dt><code>v-model</code>:</dt>
+    <dd>
+      <p><AppInputField v-model="appInputFieldModelValue" /></p>
+      <ul>
+        <li>Value: {{ appInputFieldModelValue }}</li>
+        <li>Type: {{ typeof appInputFieldModelValue }}</li>
+      </ul>
+    </dd>
+    <dt><code>v-model.lazy</code>:</dt>
+    <dd>
+      <p><AppInputField v-model.lazy="appInputFieldModelValueLazy" /></p>
+      <ul>
+        <li>Value: {{ appInputFieldModelValueLazy }}</li>
+        <li>Type: {{ typeof appInputFieldModelValueLazy }}</li>
+      </ul>
+    </dd>
+    <dt><code>v-model.number</code>:</dt>
+    <dd>
+      <p><AppInputField v-model.number="appInputFieldModelValueNumber" /></p>
+      <ul>
+        <li>Value: {{ appInputFieldModelValueNumber }}</li>
+        <li>Type: {{ typeof appInputFieldModelValueNumber }}</li>
+      </ul>
+    </dd>
+    <dt><code>v-model.trim</code>:</dt>
+    <dd>
+      <p><AppInputField v-model.trim="appInputFieldModelValueTrim" /></p>
+      <ul>
+        <li>Value: {{ appInputFieldModelValueTrim }}</li>
+        <li>Type: {{ typeof appInputFieldModelValueTrim }}</li>
+      </ul>
+    </dd>
+  </dl>
 
   <!-- AppTeleport -->
   <button @click="teleported = !teleported">Toggle teleport</button>
