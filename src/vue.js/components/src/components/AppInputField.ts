@@ -24,7 +24,7 @@ type AllowType = typeof allowTypes[number]
 const defaultType: AllowType = 'text'
 
 export default defineComponent({
-  name: 'AppInput',
+  name: 'AppInputField',
   inheritAttrs: false,
   props: {
     modelValue: {} as Prop<any>,

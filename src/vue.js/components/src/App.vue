@@ -1,19 +1,19 @@
 <script lang="ts">
 import { defineComponent, reactive, toRefs } from 'vue'
 import AppHeading from './components/AppHeading'
-import AppInput from './components/AppInput'
+import AppInputField from './components/AppInputField'
 import AppTeleport from './components/AppTeleport'
 
 export default defineComponent({
   name: 'App',
   components: {
     AppHeading,
-    AppInput,
+    AppInputField,
     AppTeleport,
   },
   setup() {
     const state = reactive({
-      appInputModelValue: 'Hello, World!',
+      appInputFieldModelValue: 'Hello, World!',
       teleported: false,
     })
 
@@ -23,11 +23,16 @@ export default defineComponent({
 </script>
 
 <template>
+  <!-- AppHeading -->
   <AppHeading href="#" tag="h1" target="_blank">
     AppHeading component
   </AppHeading>
-  <p><AppInput v-model="appInputModelValue" /></p>
-  <p>value: {{ appInputModelValue }}</p>
+
+  <!-- AppInputField -->
+  <p>value: {{ appInputFieldModelValue }}</p>
+  <p><AppInputField v-model="appInputFieldModelValue" /></p>
+
+  <!-- AppTeleport -->
   <button @click="teleported = !teleported">Toggle teleport</button>
   <AppTeleport to="#teleport-target" :teleported="teleported">
     Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam perferendis
