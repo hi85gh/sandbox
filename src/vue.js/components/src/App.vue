@@ -1,5 +1,6 @@
 <script lang="ts">
 import { defineComponent, reactive, toRefs } from 'vue'
+import AppCheckbox from './components/AppCheckbox'
 import AppHeading from './components/AppHeading'
 import AppInputField from './components/AppInputField'
 import AppTeleport from './components/AppTeleport'
@@ -7,12 +8,14 @@ import AppTeleport from './components/AppTeleport'
 export default defineComponent({
   name: 'App',
   components: {
+    AppCheckbox,
     AppHeading,
     AppInputField,
     AppTeleport,
   },
   setup() {
     const state = reactive({
+      appCheckboxModelValue: false,
       appInputFieldModelValue: '',
       appInputFieldModelValueLazy: '',
       appInputFieldModelValueNumber: '',
@@ -26,6 +29,14 @@ export default defineComponent({
 </script>
 
 <template>
+  <!-- AppCheckbox -->
+  <p>
+    <label>
+      <AppCheckbox v-model="appCheckboxModelValue" />
+      {{ appCheckboxModelValue }}
+    </label>
+  </p>
+
   <!-- AppHeading -->
   <AppHeading href="#" tag="h1" target="_blank">
     AppHeading component
