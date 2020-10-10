@@ -1,0 +1,9 @@
+{
+  "private": true,
+  "scripts": {
+    "dev": "vite"
+  },
+  "devDependencies": {
+    "vite": "1.0.0-rc.4"
+  }
+}
