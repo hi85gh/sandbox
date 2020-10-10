@@ -3,6 +3,7 @@ import { defineComponent, reactive, toRefs } from 'vue'
 import AppCheckbox from './components/AppCheckbox'
 import AppHeading from './components/AppHeading'
 import AppInputField from './components/AppInputField'
+import AppRadio from './components/AppRadio'
 import AppTeleport from './components/AppTeleport'
 
 export default defineComponent({
@@ -11,6 +12,7 @@ export default defineComponent({
     AppCheckbox,
     AppHeading,
     AppInputField,
+    AppRadio,
     AppTeleport,
   },
   setup() {
@@ -20,6 +22,7 @@ export default defineComponent({
       appInputFieldModelValueLazy: '',
       appInputFieldModelValueNumber: '',
       appInputFieldModelValueTrim: '',
+      appRadioModelValue: '',
       teleported: false,
     })
 
@@ -77,6 +80,16 @@ export default defineComponent({
       </ul>
     </dd>
   </dl>
+
+  <!-- AppRadio -->
+  <p>Value: {{ appRadioModelValue }}</p>
+  <ul>
+    <li v-for="key in ['foo', 'bar', 'baz']" :key="key">
+      <label>
+        <AppRadio v-model="appRadioModelValue" :value="key" />{{ key }}
+      </label>
+    </li>
+  </ul>
 
   <!-- AppTeleport -->
   <button @click="teleported = !teleported">Toggle teleport</button>
