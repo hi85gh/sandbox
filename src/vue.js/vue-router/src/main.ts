@@ -4,6 +4,7 @@ import {
   RouterView,
   createRouter,
   createWebHistory,
+  onBeforeRouteLeave,
 } from 'vue-router'
 
 const App = defineComponent({
@@ -22,8 +23,13 @@ const Home = defineComponent({
 
 const Foo = defineComponent({
   name: 'Foo',
-  render() {
-    return h(RouterLink, { to: '/' }, 'Link to Home')
+  setup() {
+    /* コンポーネントから離れる際の処理 */
+    onBeforeRouteLeave((to, from) =>
+      window.confirm(`Move from ${from.fullPath} to ${to.fullPath}.`)
+    )
+
+    return () => h(RouterLink, { to: '/' }, 'Link to Home')
   },
 })
 
