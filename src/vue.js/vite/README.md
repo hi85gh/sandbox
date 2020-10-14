@@ -1,7 +1,7 @@
-# vue.js/vite
+# Vite
 
-- Vite:
-  [Repository](https://github.com/vitejs/vite)
+- Repository: <https://github.com/vitejs/vite>
+- Changelog: <https://github.com/vitejs/vite/blob/master/CHANGELOG.md>
 
 ## Setup
 
