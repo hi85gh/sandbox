@@ -1,0 +1,8 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "outDir": "../../dist/commonjs/es2015",
+    "target": "es2015"
+  },
+  "extends": "../../tsconfig"
+}

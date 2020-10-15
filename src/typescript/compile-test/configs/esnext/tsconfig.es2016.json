@@ -1,0 +1,8 @@
+{
+  "compilerOptions": {
+    "module": "esnext",
+    "outDir": "../../dist/esnext/es2016",
+    "target": "es2016"
+  },
+  "extends": "../../tsconfig"
+}

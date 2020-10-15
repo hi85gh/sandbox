@@ -1,0 +1,8 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "outDir": "../../dist/commonjs/es2020",
+    "target": "es2020"
+  },
+  "extends": "../../tsconfig"
+}
