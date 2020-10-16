@@ -4,5 +4,6 @@
     "outDir": "../../dist/commonjs/es3",
     "target": "es3"
   },
+  "exclude": ["../../src/class.ts"],
   "extends": "../../tsconfig"
 }
