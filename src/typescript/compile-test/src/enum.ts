@@ -1,0 +1,15 @@
+enum MetasyntacticVariable {
+  Foo,
+  Bar,
+  Baz,
+  Qux = 5,
+  Quux,
+  Corge,
+  Grault = 'Grault',
+  Garply = 'Garply',
+  Waldo = 'Waldo',
+  Fred = 0,
+  Plugh,
+  Xyzzy,
+  Thud,
+}
