@@ -4,6 +4,8 @@
     "outDir": "../../dist/esnext/es3",
     "target": "es3"
   },
-  "exclude": ["../../src/class.ts"],
+  "exclude": [
+    "../../src/class.ts" // Accessors are only available when targeting ECMAScript 5 and higher.
+  ],
   "extends": "../../tsconfig"
 }
