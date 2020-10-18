@@ -4,5 +4,8 @@
     "outDir": "../../dist/esnext/es2016",
     "target": "es2016"
   },
+  "exclude": [
+    "../../src/top-level-await.ts" // Top-level 'await' expressions are only allowed when the 'module' option is set to 'esnext' or 'system', and the 'target' option is set to 'es2017' or higher.
+  ],
   "extends": "../../tsconfig"
 }

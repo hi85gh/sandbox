@@ -6,7 +6,8 @@
     "target": "es3"
   },
   "exclude": [
-    "../../src/class.ts" // Accessors are only available when targeting ECMAScript 5 and higher.
+    "../../src/class.ts", // Accessors are only available when targeting ECMAScript 5 and higher.
+    "../../src/top-level-await.ts" // Top-level 'await' expressions are only allowed when the 'module' option is set to 'esnext' or 'system', and the 'target' option is set to 'es2017' or higher.
   ],
   "extends": "../../tsconfig"
 }
