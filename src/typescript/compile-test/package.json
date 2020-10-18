@@ -1,7 +1,8 @@
 {
   "private": true,
   "scripts": {
-    "build": "npm-run-all --parallel build:**",
+    "build": "npm-run-all --parallel build:*",
+    "build:commonjs": "npm-run-all --parallel build:commonjs:*",
     "build:commonjs:es3": "tsc --build configs/commonjs/tsconfig.es3.json",
     "build:commonjs:es5": "tsc --build configs/commonjs/tsconfig.es5.json",
     "build:commonjs:es2015": "tsc --build configs/commonjs/tsconfig.es2015.json",
@@ -11,6 +12,7 @@
     "build:commonjs:es2019": "tsc --build configs/commonjs/tsconfig.es2019.json",
     "build:commonjs:es2020": "tsc --build configs/commonjs/tsconfig.es2020.json",
     "build:commonjs:esnext": "tsc --build configs/commonjs/tsconfig.esnext.json",
+    "build:esnext": "npm-run-all --parallel build:esnext:*",
     "build:esnext:es3": "tsc --build configs/esnext/tsconfig.es3.json",
     "build:esnext:es5": "tsc --build configs/esnext/tsconfig.es5.json",
     "build:esnext:es2015": "tsc --build configs/esnext/tsconfig.es2015.json",
