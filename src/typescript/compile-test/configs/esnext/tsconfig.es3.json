@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "lib": ["dom", "es2015"], // Required for async function.
     "module": "esnext",
     "outDir": "../../dist/esnext/es3",
     "target": "es3"
