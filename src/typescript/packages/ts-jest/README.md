@@ -8,6 +8,11 @@ Jest
 
 - Repository: <https://github.com/facebook/jest>
 - Documentation: <https://jestjs.io/>
+- Release notes: <https://github.com/facebook/jest/releases>
+
+jest-extended
+
+- Repository: <https://github.com/jest-community/jest-extended>
 
 ## Notes
 
