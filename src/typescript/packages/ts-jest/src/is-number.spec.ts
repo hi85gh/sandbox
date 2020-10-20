@@ -31,3 +31,7 @@ test('Expect false.', () => {
 
   expect(isNumber(() => {})).toBe(false)
 })
+
+test('Returns a boolean.', () => {
+  expect(isNumber(0)).toBeBoolean()
+})
