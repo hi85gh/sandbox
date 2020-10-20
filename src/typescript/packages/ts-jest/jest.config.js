@@ -9,6 +9,7 @@ const { compilerOptions } = require('./tsconfig')
  */
 const config = {
   preset: 'ts-jest',
+  setupFilesAfterEnv: ['jest-extended'],
   testEnvironment: 'node',
 
   /* Reference: https://kulshekhar.github.io/ts-jest/user/config/#jest-config-with-helper */
