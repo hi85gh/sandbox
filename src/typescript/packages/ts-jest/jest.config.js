@@ -1,3 +1,6 @@
+const { pathsToModuleNameMapper } = require('ts-jest/utils')
+const { compilerOptions } = require('./tsconfig')
+
 /**
  * Reference: https://kulshekhar.github.io/ts-jest/user/config/#ide-ts-jest-config-suggestion
  *
@@ -7,6 +10,11 @@
 const config = {
   preset: 'ts-jest',
   testEnvironment: 'node',
+
+  /* Reference: https://kulshekhar.github.io/ts-jest/user/config/#jest-config-with-helper */
+  moduleNameMapper: pathsToModuleNameMapper(compilerOptions.paths, {
+    prefix: '<rootDir>/',
+  }),
 }
 
 module.exports = config
