@@ -21,3 +21,23 @@ jest-extended
 > However, there are some [caveats](https://babeljs.io/docs/en/next/babel-plugin-transform-typescript.html#caveats) to using TypeScript with Babel. Because TypeScript support in Babel is transpilation, Jest will not type-check your tests as they are run. If you want that, you can use [ts-jest](https://github.com/kulshekhar/ts-jest).
 >
 > Reference: [Getting Started · Jest](https://jestjs.io/docs/en/getting-started#using-typescript)
+
+## Using `jest.config.ts`
+
+以下の条件を満たしていれば設定ファイルを TypeScript で記述することができる。
+
+- `v26.6.0` 以上の Jest
+- ts-node がインストール済みであること
+
+```sh
+$ node_modules/.bin/jest ---version
+26.6.0
+
+$ npm install --save-dev ts-node
+```
+
+References:
+
+- <https://jestjs.io/docs/en/configuration>
+- <https://github.com/facebook/jest/releases/tag/v26.6.0>
+- <https://github.com/facebook/jest/pull/10564>
