@@ -6,6 +6,7 @@
     "module": "commonjs",
     "noEmit": true,
     "paths": { "~/*": ["src/*"] },
+    "resolveJsonModule": true,
     "skipLibCheck": true,
     "strict": true,
     "target": "es5"
