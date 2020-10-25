@@ -1,0 +1,6 @@
+{
+  "private": true,
+  "devDependencies": {
+    "@vue/cli": "4.5.8"
+  }
+}
