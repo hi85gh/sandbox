@@ -1,10 +1,12 @@
 <script lang="ts">
-import { defineComponent, reactive, toRefs } from 'vue'
+import { computed, defineComponent, reactive, toRefs } from 'vue'
 import AppCheckbox from './components/AppCheckbox'
 import AppHeading from './components/AppHeading'
 import AppInputField from './components/AppInputField'
 import AppRadio from './components/AppRadio'
 import AppTeleport from './components/AppTeleport'
+import ButtonCounter from './components/ButtonCounter'
+import { useStore } from './composables/use-store'
 
 export default defineComponent({
   name: 'App',
@@ -14,8 +16,10 @@ export default defineComponent({
     AppInputField,
     AppRadio,
     AppTeleport,
+    ButtonCounter,
   },
   setup() {
+    const store = useStore()
     const state = reactive({
       appCheckboxModelValue: false,
       appInputFieldModelValue: '',
@@ -25,8 +29,12 @@ export default defineComponent({
       appRadioModelValue: '',
       teleported: false,
     })
+    const storeCounterClick = computed(() => store.counter.click)
 
-    return toRefs(state)
+    return {
+      ...toRefs(state),
+      storeCounterClick,
+    }
   },
 })
 </script>
@@ -99,4 +107,8 @@ export default defineComponent({
     numquam! Non, doloribus impedit? Beatae debitis nihil quasi reprehenderit,
     consequuntur vitae harum?
   </AppTeleport>
+
+  <!-- ButtonCounter -->
+  <p>Count: {{ storeCounterClick }}</p>
+  <p><ButtonCounter /></p>
 </template>
