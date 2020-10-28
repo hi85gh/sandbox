@@ -5,7 +5,7 @@
   "liveServer.settings.root": "/static",
   "vetur.experimental.templateInterpolationService": true,
   "vetur.format.defaultFormatter.html": "prettier",
-  "vetur.validation.template": false, // Avoid Vue 3 error
+  "vetur.validation.template": false, // Avoid Vue v3 error: vue/no-multiple-template-root
   "[vue]": {
     "editor.defaultFormatter": "octref.vetur"
   }
