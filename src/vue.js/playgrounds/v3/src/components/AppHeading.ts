@@ -1,4 +1,5 @@
-import { PropType, defineComponent, h } from 'vue'
+import { defineComponent, h } from 'vue'
+import type { Prop } from 'vue'
 
 const tags = ['h1', 'h2', 'h3', 'h4', 'h5', 'h6'] as const
 const targets = ['_blank', '_parent', '_self', '_top'] as const
@@ -14,22 +15,22 @@ export default defineComponent({
       type: String,
       required: false,
       validator: (value: string) => /^(https?:\/\/.+|\/.*|#.*)$/.test(value),
-    },
+    } as Prop<string>,
     tag: {
-      type: String as PropType<Tag>,
-      default: 'h1',
+      type: String,
+      required: false,
       validator: (value: Tag) => tags.includes(value),
-    },
+    } as Prop<Tag>,
     target: {
-      type: String as PropType<Target>,
+      type: String,
       required: false,
       validator: (value: Target) => targets.includes(value),
-    },
+    } as Prop<Target>,
   },
   setup(props, { attrs, slots }) {
     return () => {
       const { href, tag, target } = props
-      const Heading = h(tag, attrs, slots)
+      const Heading = h(tag || 'h1', attrs, slots)
 
       if (href) {
         return h(

@@ -1,17 +1,18 @@
-import { PropType, Teleport, defineComponent, h } from 'vue'
+import { Teleport, defineComponent, h } from 'vue'
+import type { Prop } from 'vue'
 
 export default defineComponent({
   name: 'AppTeleport',
   inheritAttrs: false,
   props: {
     teleported: {
-      type: Boolean as PropType<boolean>,
+      type: Boolean,
       default: false,
-    },
+    } as Prop<boolean>,
     to: {
-      type: String as PropType<string>,
+      type: String,
       required: true,
-    },
+    } as Prop<string>,
   },
   setup(props, { attrs, slots }) {
     return () =>
