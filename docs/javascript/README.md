@@ -21,4 +21,5 @@
 
 - [blotter.js](https://github.com/hi85gh/sandbox/tree/main/src/javascript/libraries/blotter.js)
 - [magic-grid](https://github.com/hi85gh/sandbox/tree/main/src/javascript/libraries/magic-grid)
+- [particles.js](https://github.com/hi85gh/sandbox/tree/main/src/javascript/libraries/particles.js)
 - [swiper](https://github.com/hi85gh/sandbox/tree/main/src/javascript/libraries/swiper)

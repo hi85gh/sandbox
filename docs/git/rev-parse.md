@@ -20,11 +20,6 @@ $ git rev-parse HEAD
 $ git rev-parse --short HEAD
 ```
 
-<dl>
-<dt>References</dt>
-<dd>
+_References_
 
 - <https://gotohayato.com/content/85/>
-
-</dd>
-</dl>

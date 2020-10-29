@@ -24,13 +24,8 @@ $ git rebase -i -r origin/main
 $ git rebase --interactive --preserve-merges origin/main
 ```
 
-<dl>
-<dt>References</dt>
-<dd>
+_References_
 
 - <https://git-scm.com/docs/git-rebase#Documentation/git-rebase.txt--r>
 - <https://git-scm.com/docs/git-rebase#Documentation/git-rebase.txt--p>
 - <https://github.com/git/git/blob/master/Documentation/RelNotes/2.22.0.txt#L46>
-
-</dd>
-</dl>
