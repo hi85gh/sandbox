@@ -1,6 +1,7 @@
 {
   "files.exclude": {
-    "static/symbolic-links": true
+    "static/symbolic-links": true,
+    "src/javascript/libraries/blotter.js/materials": true
   },
   "liveServer.settings.root": "/static",
   "vetur.experimental.templateInterpolationService": true,
