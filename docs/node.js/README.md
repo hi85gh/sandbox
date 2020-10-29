@@ -6,3 +6,7 @@
   - API (latest): <https://nodejs.org/api/>
 - Releases: <https://nodejs.org/en/download/releases/>
 - Changelog: <https://github.com/nodejs/node/tree/master/doc/changelogs>
+
+## Packages
+
+- [jsdoc](https://github.com/hi85gh/sandbox/tree/main/src/node.js/packages/jsdoc)

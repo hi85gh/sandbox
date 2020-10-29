@@ -7,8 +7,6 @@ $ git rev-parse -h
 usage: git rev-parse --parseopt [<options>] -- [<args>...]
    or: git rev-parse --sq-quote [<arg>...]
    or: git rev-parse [<options>] [<arg>...]
-
-Run "git rev-parse --parseopt -h" for more information on the first usage.
 ```
 
 ## コミットハッシュの取得
@@ -22,6 +20,11 @@ $ git rev-parse HEAD
 $ git rev-parse --short HEAD
 ```
 
-## References
+<dl>
+<dt>References</dt>
+<dd>
 
-- [Git で現在のコミットのハッシュを取得する方法 | gotohayato.com](https://gotohayato.com/content/85/)
+- <https://gotohayato.com/content/85/>
+
+</dd>
+</dl>
