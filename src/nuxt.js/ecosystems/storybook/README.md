@@ -1,11 +1,13 @@
-# nuxt.js/storybook
+# @nuxtjs/storybook
 
 - @nuxtjs/storybook:
-  [Repository](https://github.com/nuxt-community/storybook) /
-  [Documentation](https://storybook.nuxtjs.org/)
+  - Repository: <https://github.com/nuxt-community/storybook>
+  - Documentation: <https://storybook.nuxtjs.org/>
+  - Release notes: <https://github.com/nuxt-community/storybook/releases>
 - Storybook:
-  [Repository](https://github.com/storybookjs/storybook) /
-  [Documentation](https://storybook.js.org/)
+  - Repository: <https://github.com/storybookjs/storybook>
+  - Documentation: <https://storybook.js.org/>
+  - Release notes: <https://github.com/storybookjs/storybook/releases>
 
 ## Setup
 

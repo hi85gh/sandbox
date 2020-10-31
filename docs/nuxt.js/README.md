@@ -6,4 +6,6 @@
 
 ## Ecosystems
 
+- [@nuxtjs/composition-api](https://github.com/hi85gh/sandbox/tree/main/src/nuxt.js/ecosystems/composition-api)
 - [@nuxtjs/storybook](https://github.com/hi85gh/sandbox/tree/main/src/nuxt.js/ecosystems/storybook)
+- [@nuxtjs/tailwindcss](https://github.com/hi85gh/sandbox/tree/main/src/nuxt.js/ecosystems/tailwindcss)
