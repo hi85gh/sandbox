@@ -1,20 +1,59 @@
-# composition-api
+# @nuxtjs/composition-api
 
-## Build Setup
+- @nuxtjs/composition-api
+  - Repository: <https://github.com/nuxt-community/composition-api>
+  - Documentation: <https://composition-api.nuxtjs.org/>
+  - Release notes: <https://github.com/nuxt-community/composition-api/releases>
+- Vue Composition API:
+  - Repository: <https://github.com/vuejs/composition-api>
+  - Documentation: <https://composition-api.vuejs.org/>
+  - Release notes: <https://github.com/vuejs/composition-api/releases>
 
-```bash
-# install dependencies
-$ npm install
+## Setup
 
-# serve with hot reload at localhost:3000
-$ npm run dev
+```sh
+$ npx create-nuxt-app composition-api
 
-# build for production and launch server
-$ npm run build
-$ npm run start
+create-nuxt-app v3.4.0
+✨  Generating Nuxt.js project in composition-api
+? Project name: composition-api
+? Programming language: TypeScript
+? Package manager: Npm
+? UI framework: None
+? Nuxt.js modules:
+? Linting tools:
+? Testing framework: None
+? Rendering mode: Universal (SSR / SSG)
+? Deployment target: Static (Static/JAMStack hosting)
+? Development tools:
+? What is your GitHub username?
+? Version control system: None
 
-# generate static project
-$ npm run generate
+$ cd composition-api
+
+$ node_modules/.bin/nuxt-ts --version
+@nuxt/cli v2.14.7
+
+$ rm -rf \
+  .editorconfig \
+  .gitignore \
+  assets \
+  components/README.md \
+  layouts/README.md \
+  middleware \
+  pages/README.md \
+  plugins \
+  static \
+  store
+
+$ npm install @nuxtjs/composition-api --save-exact
 ```
 
-For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
+`nuxt.config.js`
+
+```diff
+export default {
+- buildModules: ['@nuxt/typescript-build'],
++ buildModules: ['@nuxt/typescript-build', '@nuxtjs/composition-api'],
+}
+```
