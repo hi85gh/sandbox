@@ -1,22 +1,38 @@
 <script lang="ts">
-import { defineComponent } from '@nuxtjs/composition-api'
+import { computed, defineComponent, useMeta } from '@nuxtjs/composition-api'
 
-export default defineComponent({})
+const title = 'composition-api'
+
+export default defineComponent({
+  setup() {
+    useMeta({ title })
+    const heading = computed(() => title)
+    const links = computed(() => [
+      { href: 'https://nuxtjs.org/', text: 'Documentation' },
+      { href: 'https://github.com/nuxt/nuxt.js', text: 'GitHub' },
+    ])
+
+    return {
+      heading,
+      links,
+    }
+  },
+  head: {},
+})
 </script>
 
 <template>
   <div>
-    <h1>composition-api</h1>
+    <h1>{{ heading }}</h1>
     <p>
-      <a href="https://nuxtjs.org/" target="_blank" rel="noopener noreferrer">
-        Documentation
-      </a>
       <a
-        href="https://github.com/nuxt/nuxt.js"
-        target="_blank"
+        v-for="link in links"
+        :key="link.href"
+        :href="link.href"
         rel="noopener noreferrer"
+        target="_blank"
       >
-        GitHub
+        {{ link.text }}
       </a>
     </p>
   </div>
