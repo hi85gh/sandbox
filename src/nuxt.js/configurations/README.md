@@ -1,20 +1,66 @@
 # configurations
 
-## Build Setup
+## Setup
 
-```bash
-# install dependencies
-$ npm install
+```sh
+$ npx create-nuxt-app configurations
 
-# serve with hot reload at localhost:3000
-$ npm run dev
+create-nuxt-app v3.4.0
+✨  Generating Nuxt.js project in configurations
+? Project name: configurations
+? Programming language: TypeScript
+? Package manager: Npm
+? UI framework: None
+? Nuxt.js modules:
+? Linting tools:
+? Testing framework: None
+? Rendering mode: Universal (SSR / SSG)
+? Deployment target: Static (Static/JAMStack hosting)
+? Development tools:
+? What is your GitHub username?
+? Version control system: None
 
-# build for production and launch server
-$ npm run build
-$ npm run start
+$ cd configurations
 
-# generate static project
-$ npm run generate
+$ node_modules/.bin/nuxt-ts --version
+@nuxt/cli v2.14.7
+
+$ rm -rf \
+  .editorconfig \
+  .gitignore \
+  assets \
+  components/README.md \
+  layouts/README.md \
+  middleware \
+  pages/README.md \
+  plugins \
+  static \
+  store
 ```
 
-For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
+## Configurations
+
+### `nuxt.config.generate-for-local.ts`
+
+`generate` コマンドで書き出した静的ファイルをサーバーを起動せずにローカルで確認できるようにする設定。  
+ブラウザーのコンソールに以下のようなエラーが表示するが動作確認は可能。
+
+```sh
+# Google Chrome
+GET file:///_nuxt/static/0000000000/payload.js net::ERR_FILE_NOT_FOUND
+```
+
+- Nuxt.js `v2.14.7` で確認
+- `payload.js` の読み込みを停止する方法は不明
+- `config.hooks.generate.page` で HTML を上書くことは可能だが別のエラーが発生する
+  ```ts
+  export default {
+    hooks: {
+      generate: {
+        page(args) {
+          args.html = args.html.replace(/\/_nuxt\/static\//g, "_nuxt/static/");
+        },
+      },
+    },
+  };
+  ```
