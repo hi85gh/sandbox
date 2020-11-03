@@ -2,6 +2,7 @@
   "private": true,
   "scripts": {
     "dev": "nuxt-ts",
+    "dev-add-alias-to-routes": "nuxt-ts --config-file nuxt.config.add-alias-to-routes",
     "build": "nuxt-ts build",
     "start": "nuxt-ts start",
     "generate": "nuxt-ts generate",
