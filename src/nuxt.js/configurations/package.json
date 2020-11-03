@@ -4,7 +4,8 @@
     "dev": "nuxt-ts",
     "build": "nuxt-ts build",
     "start": "nuxt-ts start",
-    "generate": "nuxt-ts generate"
+    "generate": "nuxt-ts generate",
+    "generate-for-local": "nuxt-ts generate --config-file nuxt.config.generate-for-local"
   },
   "dependencies": {
     "@nuxt/typescript-runtime": "2.0.0",
