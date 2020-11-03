@@ -40,6 +40,10 @@ $ rm -rf \
 
 ## Configurations
 
+### `nuxt.config.add-alias-to-routes.ts`
+
+`index.html` にアクセスされた場合に `index.vue` の内容を返す設定。
+
 ### `nuxt.config.generate-for-local.ts`
 
 `generate` コマンドで書き出した静的ファイルをサーバーを起動せずにローカルで確認できるようにする設定。  
