@@ -2,11 +2,12 @@
   "private": true,
   "scripts": {
     "dev": "nuxt-ts",
-    "dev-add-alias-to-routes": "nuxt-ts --config-file nuxt.config.add-alias-to-routes",
+    "dev:add-alias-to-routes": "nuxt-ts --config-file nuxt.config.add-alias-to-routes",
     "build": "nuxt-ts build",
     "start": "nuxt-ts start",
     "generate": "nuxt-ts generate",
-    "generate-for-local": "nuxt-ts generate --config-file nuxt.config.generate-for-local"
+    "generate:delete-file-after-generated": "nuxt-ts generate --config-file nuxt.config.delete-file-after-generated",
+    "generate:generate-for-local": "nuxt-ts generate --config-file nuxt.config.generate-for-local"
   },
   "dependencies": {
     "@nuxt/typescript-runtime": "2.0.0",
