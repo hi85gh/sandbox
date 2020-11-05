@@ -44,6 +44,10 @@ $ rm -rf \
 
 `index.html` にアクセスされた場合に `index.vue` の内容を返す設定。
 
+### `nuxt.config.delete-file-after-generated.ts`
+
+`generate` コマンドで静的ファイルを書き出した後に不要なファイルを削除する設定。
+
 ### `nuxt.config.generate-for-local.ts`
 
 `generate` コマンドで書き出した静的ファイルをサーバーを起動せずにローカルで確認できるようにする設定。  
