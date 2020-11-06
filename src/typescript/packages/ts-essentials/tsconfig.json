@@ -1,0 +1,5 @@
+{
+  "compilerOptions": {
+    "lib": ["ES2015"] // ts-essentials requires es2015 or later
+  }
+}
