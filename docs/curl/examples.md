@@ -1,16 +1,11 @@
 # Examples <!-- omit in toc -->
 
-<details>
-<summary>Table of contents</summary>
-<div>
+## Table of contents <!-- omit in toc -->
 
 - [JSON 形式での POST](#json-形式での-post)
 - [複数ファイルの一括ダウンロード](#複数ファイルの一括ダウンロード)
 - [GitHub からソースコードのダウンロード](#github-からソースコードのダウンロード)
 - [GitHub からソースコードをダウンロードし任意のディレクトリのみ展開](#github-からソースコードをダウンロードし任意のディレクトリのみ展開)
-
-</div>
-</details>
 
 ## JSON 形式での POST
 

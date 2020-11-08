@@ -2,8 +2,8 @@
 
 - Official site: <https://curl.se/>
 - Repository: <https://github.com/curl/curl>
-  - Manual: <https://curl.se/docs/manpage.html>
 - Documentation: <https://curl.se/docs/>
+  - Manual: <https://curl.se/docs/manpage.html>
 - Changelog: <https://curl.se/changes.html>
 
 ## Table of contents

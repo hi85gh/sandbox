@@ -21,3 +21,4 @@
 - ts-node: <https://github.com/hi85gh/sandbox/tree/main/src/typescript/examples/ts-node>
 - ts-node-dev: <https://github.com/hi85gh/sandbox/tree/main/src/typescript/examples/ts-node-dev>
 - tsconfig-paths: <https://github.com/hi85gh/sandbox/tree/main/src/typescript/examples/tsconfig-paths>
+- type-fest: <https://github.com/hi85gh/sandbox/tree/main/src/typescript/examples/type-fest>
