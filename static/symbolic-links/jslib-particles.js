@@ -1,1 +1,1 @@
-../../src/javascript/libraries/particles.js
+../../src/javascript/examples/particles.js

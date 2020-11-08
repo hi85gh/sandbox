@@ -1,1 +1,1 @@
-../../src/javascript/libraries/blotter.js
+../../src/javascript/examples/blotter.js
