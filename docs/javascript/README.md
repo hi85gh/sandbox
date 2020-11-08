@@ -13,13 +13,13 @@
   - ES2016: <https://www.ecma-international.org/ecma-262/7.0/>
   - ES2015: <https://www.ecma-international.org/ecma-262/6.0/>
   - ES5: <https://www.ecma-international.org/ecma-262/5.1/>
-- ESnext
+- ESNext
   - Draft: <https://github.com/tc39/ecma262>
   - Proposals: <https://tc39.es/process-document/>
 
-## Libraries
+## Examples
 
-- [blotter.js](https://github.com/hi85gh/sandbox/tree/main/src/javascript/libraries/blotter.js)
-- [magic-grid](https://github.com/hi85gh/sandbox/tree/main/src/javascript/libraries/magic-grid)
-- [particles.js](https://github.com/hi85gh/sandbox/tree/main/src/javascript/libraries/particles.js)
-- [swiper](https://github.com/hi85gh/sandbox/tree/main/src/javascript/libraries/swiper)
+- blotter.js: <https://github.com/hi85gh/sandbox/tree/main/src/javascript/libraries/blotter.js>
+- magic-grid: <https://github.com/hi85gh/sandbox/tree/main/src/javascript/libraries/magic-grid>
+- particles.js: <https://github.com/hi85gh/sandbox/tree/main/src/javascript/libraries/particles.js>
+- swiper: <https://github.com/hi85gh/sandbox/tree/main/src/javascript/libraries/swiper>

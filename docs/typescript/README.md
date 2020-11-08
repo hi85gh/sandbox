@@ -8,13 +8,14 @@
   - TSConfig: <https://www.typescriptlang.org/tsconfig>
 - Release notes: <https://www.typescriptlang.org/docs/handbook/release-notes/>
 - Playground: <https://www.typescriptlang.org/play>
+- Blog: <https://devblogs.microsoft.com/typescript/>
 
-## Packages
+## Examples
 
-- [faker](https://github.com/hi85gh/sandbox/tree/main/src/typescript/packages/faker)
-- [nodemon](https://github.com/hi85gh/sandbox/tree/main/src/typescript/packages/nodemon)
-- [ts-essentials](https://github.com/hi85gh/sandbox/tree/main/src/typescript/packages/ts-essentials)
-- [ts-jest](https://github.com/hi85gh/sandbox/tree/main/src/typescript/packages/ts-jest)
-- [ts-node](https://github.com/hi85gh/sandbox/tree/main/src/typescript/packages/ts-node)
-- [ts-node-dev](https://github.com/hi85gh/sandbox/tree/main/src/typescript/packages/ts-node-dev)
-- [tsconfig-paths](https://github.com/hi85gh/sandbox/tree/main/src/typescript/packages/tsconfig-paths)
+- faker: <https://github.com/hi85gh/sandbox/tree/main/src/typescript/packages/faker>
+- nodemon: <https://github.com/hi85gh/sandbox/tree/main/src/typescript/packages/nodemon>
+- ts-essentials: <https://github.com/hi85gh/sandbox/tree/main/src/typescript/packages/ts-essentials>
+- ts-jest: <https://github.com/hi85gh/sandbox/tree/main/src/typescript/packages/ts-jest>
+- ts-node: <https://github.com/hi85gh/sandbox/tree/main/src/typescript/packages/ts-node>
+- ts-node-dev: <https://github.com/hi85gh/sandbox/tree/main/src/typescript/packages/ts-node-dev>
+- tsconfig-paths: <https://github.com/hi85gh/sandbox/tree/main/src/typescript/packages/tsconfig-paths>

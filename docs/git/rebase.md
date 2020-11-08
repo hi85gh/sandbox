@@ -24,7 +24,7 @@ $ git rebase -i -r origin/main
 $ git rebase --interactive --preserve-merges origin/main
 ```
 
-_References_
+## References
 
 - <https://git-scm.com/docs/git-rebase#Documentation/git-rebase.txt--r>
 - <https://git-scm.com/docs/git-rebase#Documentation/git-rebase.txt--p>

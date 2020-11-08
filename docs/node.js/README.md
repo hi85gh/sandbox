@@ -7,6 +7,6 @@
 - Release notes: <https://nodejs.org/en/download/releases/>
 - Changelog: <https://github.com/nodejs/node/tree/master/doc/changelogs>
 
-## Packages
+## Examples
 
-- [jsdoc](https://github.com/hi85gh/sandbox/tree/main/src/node.js/packages/jsdoc)
+- jsdoc: <https://github.com/hi85gh/sandbox/tree/main/src/node.js/packages/jsdoc>

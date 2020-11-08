@@ -20,6 +20,6 @@ $ git rev-parse HEAD
 $ git rev-parse --short HEAD
 ```
 
-_References_
+## References
 
 - <https://gotohayato.com/content/85/>
