@@ -7,4 +7,6 @@
 
 ## Examples
 
-- vite: <https://github.com/hi85gh/sandbox/tree/main/src/react/ecosystems/vite>
+### Packages
+
+- vite: <https://github.com/hi85gh/sandbox/tree/main/src/react/examples/vite>

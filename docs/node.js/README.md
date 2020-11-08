@@ -9,4 +9,10 @@
 
 ## Examples
 
-- jsdoc: <https://github.com/hi85gh/sandbox/tree/main/src/node.js/packages/jsdoc>
+### API
+
+- fs: <https://github.com/hi85gh/sandbox/tree/main/src/node.js/examples/api/fs>
+
+### Packages
+
+- jsdoc: <https://github.com/hi85gh/sandbox/tree/main/src/node.js/examples/jsdoc>

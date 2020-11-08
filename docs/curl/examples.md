@@ -2,12 +2,14 @@
 
 <details>
 <summary>Table of contents</summary>
+<div>
 
 - [JSON 形式での POST](#json-形式での-post)
 - [複数ファイルの一括ダウンロード](#複数ファイルの一括ダウンロード)
 - [GitHub からソースコードのダウンロード](#github-からソースコードのダウンロード)
 - [GitHub からソースコードをダウンロードし任意のディレクトリのみ展開](#github-からソースコードをダウンロードし任意のディレクトリのみ展開)
 
+</div>
 </details>
 
 ## JSON 形式での POST
@@ -27,7 +29,7 @@ $ curl 'http://example.com/entries' \
 
 ## 複数ファイルの一括ダウンロード
 
-複数ファイルを指定する場合は URL を引用符で囲む必要がある。
+複数ファイルを指定する場合は URL を引用符で囲む。
 
 ```sh
 $ curl "https://raw.githubusercontent.com/hi85gh/sandbox/main/{foo,bar,baz}/[1-9].md" --output "#1_#2.md"

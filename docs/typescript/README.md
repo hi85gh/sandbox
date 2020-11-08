@@ -12,10 +12,12 @@
 
 ## Examples
 
-- faker: <https://github.com/hi85gh/sandbox/tree/main/src/typescript/packages/faker>
-- nodemon: <https://github.com/hi85gh/sandbox/tree/main/src/typescript/packages/nodemon>
-- ts-essentials: <https://github.com/hi85gh/sandbox/tree/main/src/typescript/packages/ts-essentials>
-- ts-jest: <https://github.com/hi85gh/sandbox/tree/main/src/typescript/packages/ts-jest>
-- ts-node: <https://github.com/hi85gh/sandbox/tree/main/src/typescript/packages/ts-node>
-- ts-node-dev: <https://github.com/hi85gh/sandbox/tree/main/src/typescript/packages/ts-node-dev>
-- tsconfig-paths: <https://github.com/hi85gh/sandbox/tree/main/src/typescript/packages/tsconfig-paths>
+### Packages
+
+- faker: <https://github.com/hi85gh/sandbox/tree/main/src/typescript/examples/faker>
+- nodemon: <https://github.com/hi85gh/sandbox/tree/main/src/typescript/examples/nodemon>
+- ts-essentials: <https://github.com/hi85gh/sandbox/tree/main/src/typescript/examples/ts-essentials>
+- ts-jest: <https://github.com/hi85gh/sandbox/tree/main/src/typescript/examples/ts-jest>
+- ts-node: <https://github.com/hi85gh/sandbox/tree/main/src/typescript/examples/ts-node>
+- ts-node-dev: <https://github.com/hi85gh/sandbox/tree/main/src/typescript/examples/ts-node-dev>
+- tsconfig-paths: <https://github.com/hi85gh/sandbox/tree/main/src/typescript/examples/tsconfig-paths>

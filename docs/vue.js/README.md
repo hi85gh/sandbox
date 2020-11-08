@@ -25,7 +25,9 @@
 
 ## Examples
 
-- @vue/cli: <https://github.com/hi85gh/sandbox/blob/main/src/vue.js/ecosystems/cli>
-- vite: <https://github.com/hi85gh/sandbox/tree/main/src/vue.js/ecosystems/vite>
-- vue-router: <https://github.com/hi85gh/sandbox/tree/main/src/vue.js/ecosystems/vue-router>
-- vuedraggable: <https://github.com/hi85gh/sandbox/tree/main/src/vue.js/ecosystems/vuedraggable>
+### Packages
+
+- @vue/cli: <https://github.com/hi85gh/sandbox/blob/main/src/vue.js/examples/cli>
+- vite: <https://github.com/hi85gh/sandbox/tree/main/src/vue.js/examples/vite>
+- vue-router: <https://github.com/hi85gh/sandbox/tree/main/src/vue.js/examples/vue-router>
+- vuedraggable: <https://github.com/hi85gh/sandbox/tree/main/src/vue.js/examples/vuedraggable>
