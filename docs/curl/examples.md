@@ -4,6 +4,7 @@
 
 - [JSON 形式での POST](#json-形式での-post)
 - [複数ファイルの一括ダウンロード](#複数ファイルの一括ダウンロード)
+- [ダウンロード先のディレクトリを作成](#ダウンロード先のディレクトリを作成)
 - [GitHub からソースコードのダウンロード](#github-からソースコードのダウンロード)
 - [GitHub からソースコードをダウンロードし任意のディレクトリのみ展開](#github-からソースコードをダウンロードし任意のディレクトリのみ展開)
 
@@ -31,6 +32,14 @@ $ curl "https://raw.githubusercontent.com/hi85gh/sandbox/main/{foo,bar,baz}/[1-9
 
 # Short version
 $ curl "https://raw.githubusercontent.com/hi85gh/sandbox/main/{foo,bar,baz}/[1-9].md" -o "#1_#2.md"
+```
+
+## ダウンロード先のディレクトリを作成
+
+```sh
+$ curl "https://raw.githubusercontent.com/hi85gh/sandbox/main/README.md" \
+  --create-dirs \
+  --output foo/bar/baz/README.md
 ```
 
 ## GitHub からソースコードのダウンロード
