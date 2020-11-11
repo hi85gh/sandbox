@@ -2,15 +2,22 @@
 
 ## Table of contents
 
-- [curl](curl/README.md)
-- [Git](git/README.md)
-- [JavaScript](javascript/README.md)
-- [Node.js](node.js/README.md)
-- [Nuxt.js](nuxt.js/README.md)
-- [React](react/README.md)
-- [rsync](rsync/README.md)
-- [tar](tar/README.md)
-- [TypeScript](typescript/README.md)
-- [Vue.js](vue.js/README.md)
+### Commands
 
-* [Resources](resources/README.md)
+- [curl](commands/curl/README.md)
+- [Git](commands/git/README.md)
+- [rsync](commands/rsync/README.md)
+- [tar](commands/tar/README.md)
+
+### Developments
+
+- [JavaScript](developments/javascript/README.md)
+- [Node.js](developments/node.js/README.md)
+- [Nuxt.js](developments/nuxt.js/README.md)
+- [React](developments/react/README.md)
+- [TypeScript](developments/typescript/README.md)
+- [Vue.js](developments/vue.js/README.md)
+
+### Miscellaneous
+
+- [Resources](miscellaneous/resources/README.md)

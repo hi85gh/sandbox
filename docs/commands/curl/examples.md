@@ -1,4 +1,4 @@
-# Examples <!-- omit in toc -->
+# curl examples <!-- omit in toc -->
 
 ## Table of contents <!-- omit in toc -->
 
