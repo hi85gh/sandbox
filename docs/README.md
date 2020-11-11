@@ -8,6 +8,7 @@
 - [Git](commands/git/README.md)
 - [rsync](commands/rsync/README.md)
 - [tar](commands/tar/README.md)
+- [WebP](commands/webp/README.md)
 
 ### Developments
 
