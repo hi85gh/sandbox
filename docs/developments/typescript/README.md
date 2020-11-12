@@ -16,6 +16,7 @@
 
 - faker: <https://github.com/hi85gh/sandbox/tree/main/src/typescript/examples/faker>
 - nodemon: <https://github.com/hi85gh/sandbox/tree/main/src/typescript/examples/nodemon>
+- qrcode: <https://github.com/hi85gh/sandbox/tree/main/src/typescript/examples/qrcode>
 - ts-essentials: <https://github.com/hi85gh/sandbox/tree/main/src/typescript/examples/ts-essentials>
 - ts-jest: <https://github.com/hi85gh/sandbox/tree/main/src/typescript/examples/ts-jest>
 - ts-node: <https://github.com/hi85gh/sandbox/tree/main/src/typescript/examples/ts-node>
