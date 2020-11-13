@@ -1,6 +1,4 @@
 {
-  "name": "nuxt-client-init-plugin",
-  "version": "1.0.0",
   "private": true,
   "scripts": {
     "dev": "nuxt-ts",
@@ -9,12 +7,12 @@
     "generate": "nuxt-ts generate"
   },
   "dependencies": {
-    "@nuxt/typescript-runtime": "^2.0.0",
-    "core-js": "^3.6.5",
-    "nuxt": "^2.14.6"
+    "@nuxt/typescript-runtime": "2.0.0",
+    "core-js": "3.7.0",
+    "nuxt": "2.14.7"
   },
   "devDependencies": {
-    "@nuxt/types": "^2.14.6",
-    "@nuxt/typescript-build": "^2.0.3"
+    "@nuxt/types": "2.14.7",
+    "@nuxt/typescript-build": "2.0.3"
   }
 }
