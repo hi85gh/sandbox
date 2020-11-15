@@ -11,6 +11,7 @@
 - @nuxtjs/composition-api: <https://github.com/hi85gh/sandbox/tree/main/src/nuxt.js/examples/composition-api>
 - @nuxtjs/storybook: <https://github.com/hi85gh/sandbox/tree/main/src/nuxt.js/examples/storybook>
 - @nuxtjs/tailwindcss: <https://github.com/hi85gh/sandbox/tree/main/src/nuxt.js/examples/tailwindcss>
+- nuxt-typed-vuex: <https://github.com/hi85gh/sandbox/tree/main/src/nuxt.js/examples/nuxt-typed-vuex>
 
 ### Miscellaneous
 
