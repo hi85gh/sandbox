@@ -36,7 +36,7 @@ $ node_modules/.bin/jest ---version
 $ npm install --save-dev ts-node
 ```
 
-References:
+### References:
 
 - <https://jestjs.io/docs/en/configuration>
 - <https://github.com/facebook/jest/releases/tag/v26.6.0>

@@ -6,7 +6,7 @@
   - Description: <https://www.webmproject.org/code/#webp-repositories>
 - ChangeLog: <https://chromium.googlesource.com/webm/libwebp/+/refs/heads/master/ChangeLog>
 
-## Note
+## Notes
 
 <!-- prettier-ignore -->
 > WebP（ウェッピー）は、米Googleが開発しているオープンな静止画像フォーマット。ファイルの拡張子は「.webp」。

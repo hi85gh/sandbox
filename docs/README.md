@@ -21,4 +21,6 @@
 
 ### Miscellaneous
 
+- [Links](miscellaneous/links/README.md)
 - [Resources](miscellaneous/resources/README.md)
+- [Tips](miscellaneous/tips/README.md)

@@ -20,6 +20,4 @@ $ git rev-parse HEAD
 $ git rev-parse --short HEAD
 ```
 
-## References
-
-- <https://gotohayato.com/content/85/>
+Commentary: <https://www.publickey1.jp/blog/19/htmlw3cwhatwgwhatwghtml.html>
