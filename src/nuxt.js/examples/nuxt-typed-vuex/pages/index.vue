@@ -2,18 +2,7 @@
   <div>
     <div>
       <h1>nuxt-typed-vuex</h1>
-      <div>
-        <a href="https://nuxtjs.org/" target="_blank" rel="noopener noreferrer">
-          Documentation
-        </a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          GitHub
-        </a>
-      </div>
+      <p>{{ message }}</p>
     </div>
   </div>
 </template>
@@ -21,5 +10,11 @@
 <script lang="ts">
 import Vue from 'vue'
 
-export default Vue.extend({})
+export default Vue.extend({
+  computed: {
+    message() {
+      return this.$accessor.example.message
+    }
+  }
+})
 </script>
