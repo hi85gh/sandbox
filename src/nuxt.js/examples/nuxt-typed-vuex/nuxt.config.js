@@ -1,4 +1,4 @@
 export default {
-  buildModules: ['@nuxt/typescript-build'],
+  buildModules: ['@nuxt/typescript-build', 'nuxt-typed-vuex'],
   components: true,
 }
