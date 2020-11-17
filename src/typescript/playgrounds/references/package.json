@@ -1,6 +1,8 @@
 {
   "private": true,
-  "scripts": {},
+  "scripts": {
+    "dev-reflection-proxy": "ts-node-dev --respawn --transpile-only src/reflection/proxy.ts"
+  },
   "devDependencies": {
     "ts-node-dev": "1.0.0",
     "typescript": "4.0.5"
