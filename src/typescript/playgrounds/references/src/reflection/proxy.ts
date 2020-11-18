@@ -16,7 +16,7 @@ const handler: ProxyHandler<typeof target> = {
     }
 
     /**
-     * `compilerOptions.target.noImplicitAny` (`compilerOptions.target.strict`) が `true` の場合、以下の記述はエラーとなる。
+     * `compilerOptions.noImplicitAny` (`compilerOptions.strict`) が `true` の場合、以下の記述はエラーとなる。
      *
      * ```ts
      * // Error

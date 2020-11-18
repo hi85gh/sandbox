@@ -1,7 +1,7 @@
 {
   "private": true,
   "scripts": {
-    "dev-reflection-proxy": "ts-node-dev --respawn --transpile-only src/reflection/proxy.ts"
+    "dev-reflection-proxy": "ts-node-dev --compiler-options '{\"target\":\"es2015\",\"strict\":true}' src/reflection/proxy.ts"
   },
   "devDependencies": {
     "ts-node-dev": "1.0.0",
