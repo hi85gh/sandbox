@@ -14,6 +14,7 @@
 
 ### Packages
 
+- axios: <https://github.com/hi85gh/sandbox/tree/main/src/typescript/examples/axios>
 - faker: <https://github.com/hi85gh/sandbox/tree/main/src/typescript/examples/faker>
 - nodemon: <https://github.com/hi85gh/sandbox/tree/main/src/typescript/examples/nodemon>
 - qrcode: <https://github.com/hi85gh/sandbox/tree/main/src/typescript/examples/qrcode>
