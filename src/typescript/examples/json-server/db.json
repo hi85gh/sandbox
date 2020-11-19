@@ -1,0 +1,7 @@
+{
+  "posts": [
+    { "id": 1, "nested": { "title": "foo" } },
+    { "id": 2, "nested": { "title": "bar" } },
+    { "id": 3, "nested": { "title": "baz" } }
+  ]
+}

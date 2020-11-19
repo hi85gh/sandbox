@@ -1,0 +1,9 @@
+{
+  "private": true,
+  "scripts": {
+    "start": "json-server db.json"
+  },
+  "devDependencies": {
+    "json-server": "0.16.3"
+  }
+}
