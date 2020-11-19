@@ -40,6 +40,13 @@ $ curl "https://raw.githubusercontent.com/hi85gh/sandbox/main/{foo,bar,baz}/[1-9
 $ curl "https://raw.githubusercontent.com/hi85gh/sandbox/main/README.md" \
   --create-dirs \
   --output foo/bar/baz/README.md
+
+# Multiple
+$ curl --create-dirs \
+  "https://raw.githubusercontent.com/hi85gh/sandbox/main/README.md" \
+  --output foo/README.md \
+  "https://raw.githubusercontent.com/hi85gh/sandbox/main/.editorconfig" \
+  --output bar/.editorconfig
 ```
 
 ## GitHub からソースコードのダウンロード
@@ -54,6 +61,8 @@ $ curl "https://codeload.github.com/hi85gh/sandbox/tar.gz/{main}" -o "#1.zip"
 ```
 
 ## GitHub からソースコードをダウンロードし任意のディレクトリのみ展開
+
+`--strip-components` の値はディレクトリの階層に合わせて変更。
 
 GitHub URL: `https://codeload.github.com/<user_name>/<repository_name>/tar.gz/<branch|tag|commit_hash>`
 

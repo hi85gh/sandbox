@@ -3,6 +3,9 @@
 - Official site: <https://nuxtjs.org/>
 - Repository: <https://github.com/nuxt/nuxt.js>
 - Release notes: <https://nuxtjs.org/guide/release-notes>
+- List:
+  - awesome-nuxt: <https://github.com/nuxt-community/awesome-nuxt>
+  - Explore Nuxt Modules: <https://modules.nuxtjs.org/>
 
 ## Examples
 
