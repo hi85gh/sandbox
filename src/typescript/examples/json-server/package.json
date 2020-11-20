@@ -1,7 +1,7 @@
 {
   "private": true,
   "scripts": {
-    "start": "json-server db.json"
+    "start": "json-server db.json --routes routes.json"
   },
   "devDependencies": {
     "json-server": "0.16.3"
