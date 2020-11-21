@@ -17,6 +17,7 @@
 - axios: <https://github.com/hi85gh/sandbox/tree/main/src/typescript/examples/axios>
 - faker: <https://github.com/hi85gh/sandbox/tree/main/src/typescript/examples/faker>
 - json-server: <https://github.com/hi85gh/sandbox/tree/main/src/typescript/examples/json-server>
+- ngrok: <https://github.com/hi85gh/sandbox/tree/main/src/typescript/examples/ngrok>
 - nodemon: <https://github.com/hi85gh/sandbox/tree/main/src/typescript/examples/nodemon>
 - qrcode: <https://github.com/hi85gh/sandbox/tree/main/src/typescript/examples/qrcode>
 - ts-essentials: <https://github.com/hi85gh/sandbox/tree/main/src/typescript/examples/ts-essentials>
