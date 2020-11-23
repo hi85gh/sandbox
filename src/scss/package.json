@@ -1,0 +1,9 @@
+{
+  "private": true,
+  "scripts": {
+    "build": "sass src/index.scss:dist/index.css"
+  },
+  "devDependencies": {
+    "sass": "1.29.0"
+  }
+}
