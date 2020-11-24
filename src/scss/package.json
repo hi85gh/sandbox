@@ -1,7 +1,8 @@
 {
   "private": true,
   "scripts": {
-    "build": "sass src/index.scss:dist/index.css"
+    "build": "sass src:dist --no-source-map",
+    "dev": "sass src:dist --watch"
   },
   "devDependencies": {
     "sass": "1.29.0"
