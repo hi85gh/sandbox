@@ -1,0 +1,9 @@
+/**
+ * Partials
+ * Reference: https://sass-lang.com/guide#topic-4
+ */
+
+// アンダースコアで始まるファイルはコンパイルの対象外
+.partial::before {
+  content: "Not compiled.";
+}
