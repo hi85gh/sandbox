@@ -1,8 +1,11 @@
 {
   "private": true,
   "scripts": {
+    "dev": "sass src:dist --watch",
+    "predev": "npm run clean",
     "build": "sass src:dist --no-source-map",
-    "dev": "sass src:dist --watch"
+    "prebuild": "npm run clean",
+    "clean": "node --eval \"require('fs').rmdirSync('dist', { recursive: true })\""
   },
   "devDependencies": {
     "sass": "1.29.0"
