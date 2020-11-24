@@ -1,5 +1,1 @@
-$message: "Hello, World!";
-
-.foo::before {
-  content: $message;
-}
+@use 'syntaxes/variables';

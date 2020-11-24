@@ -1,0 +1,29 @@
+/**
+ * syntaxes/variables/_basic.scss
+ */
+
+// 変数の名前は $ で始め <variable>: <expression> の形で宣言
+$message: "Hello, World!";
+
+.syntaxes-variables-basic-1::before {
+  content: $message;
+}
+
+// ハイフン、アンダースコアは同一の文字列として扱われる点に注意
+$foo_bar: "foo_bar";
+
+.syntaxes-variables-basic-2::before {
+  content: $foo-bar; // $foo_bar を参照
+}
+
+$baz-qux: "baz-qux";
+
+.syntaxes-variables-basic-3::before {
+  content: $baz_qux; // $baz-qux を参照
+}
+
+$baz_qux: "Override baz-qux";
+
+.syntaxes-variables-basic-4::before {
+  content: $baz-qux; // 先に宣言した $baz-qux の値は無視され $baz_qux の値を参照
+}
