@@ -1,0 +1,15 @@
+/**
+ * syntaxes/variables/_default-value.scss
+ */
+
+$message: "Hello, World!";
+
+.syntaxes-variables-default-value-1::before {
+  content: $message;
+}
+
+$message: "Hello, New World!" !default;
+
+.syntaxes-variables-default-value-2::before {
+  content: $message; // $message は宣言済みのため "Hello, World!"
+}
