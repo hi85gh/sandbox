@@ -1,0 +1,10 @@
+/**
+ * syntaxes/at-rules/error/_basic.scss
+ */
+
+$show-error: false !default;
+$message: "Hello, World!";
+
+@if $show-error {
+  @error "Error: #{$message}"; // エラーの詳細を CSS に出力
+}
