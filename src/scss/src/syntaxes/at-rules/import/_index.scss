@@ -1,0 +1,15 @@
+/**
+ * At-Rules @import
+ * Reference: https://sass-lang.com/documentation/at-rules/import
+ *
+ * - @import は非推奨のため @use を使用する
+ * - @import は @use と異なりすべてグローバルに展開されるため
+ */
+
+$message: "Hello, New World!";
+
+// $message はインポート先に影響しない
+@use "basic";
+
+// $message がインポート先に影響する
+@import "basic";

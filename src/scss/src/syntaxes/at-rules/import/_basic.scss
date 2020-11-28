@@ -1,0 +1,7 @@
+/**
+ * syntaxes/at-rules/import/_basic.scss
+ */
+
+$message: "Hello, World!" !default;
+
+@debug "Debug: #{$message}";
