@@ -1,0 +1,17 @@
+{
+  "private": true,
+  "scripts": {
+    "start": "ts-node --compiler-options '{\"esModuleInterop\":true}' index.ts",
+    "prestart": "npm run clean && npm run create-nested-directory && npm run create-empty-file",
+    "clean": "node --eval \"require('fs').rmdirSync('dist', { recursive: true })\"",
+    "create-empty-file": "node --eval=\"require('fs').closeSync(require('fs').openSync('foo/bar/baz/empty.txt', 'w'))\"",
+    "create-nested-directory": "node --eval=\"require('fs').mkdirSync('foo/bar/baz', { recursive: true })\""
+  },
+  "devDependencies": {
+    "@types/mv": "2.1.0",
+    "@types/node": "14.14.10",
+    "mv": "2.1.1",
+    "ts-node": "9.0.0",
+    "typescript": "4.1.2"
+  }
+}
