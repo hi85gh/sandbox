@@ -6,6 +6,7 @@ import AppInputField from './components/AppInputField'
 import AppRadio from './components/AppRadio'
 import AppTeleport from './components/AppTeleport'
 import ButtonCounter from './components/ButtonCounter'
+import CssModules from './components/CssModules.vue'
 import TextDynamicallyColor from './components/TextDynamicallyColor.vue'
 import { useStore } from './composables/use-store'
 
@@ -18,6 +19,7 @@ export default defineComponent({
     AppRadio,
     AppTeleport,
     ButtonCounter,
+    CssModules,
     TextDynamicallyColor,
   },
   setup() {
@@ -114,6 +116,9 @@ export default defineComponent({
   <!-- ButtonCounter -->
   <p>Count: {{ storeCounterClick }}</p>
   <p><ButtonCounter /></p>
+
+  <!-- CssModules -->
+  <CssModules />
 
   <!-- TextDynamicallyColor -->
   <TextDynamicallyColor :color="textColor" />

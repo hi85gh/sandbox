@@ -13,7 +13,7 @@ export default defineComponent({
 </script>
 
 <template>
-  <p class="text">Hello, World!</p>
+  <p class="text">TextDynamicallyColor component.</p>
 </template>
 
 <style scoped vars="{ color }">
