@@ -1,0 +1,13 @@
+/**
+ * syntaxes/at-rules/use/loading-members/_global.scss
+ */
+
+@use '../../../variables/basic' as *;
+
+// @use '<url>' as *; とすることでインポート先の変数などがグローバルに展開される
+@debug variable-exists("message"); // true
+@debug global-variable-exists("message"); // true
+@debug "Global $message: #{$message}";
+
+// 以下の記述は名前空間が異なるためエラー
+// @debug global-variable-exists("message", "basic"); // Error: There is no module with the namespace "basic".

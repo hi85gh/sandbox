@@ -1,0 +1,12 @@
+/**
+ * syntaxes/at-rules/use/loading-members/_global.scss
+ */
+
+@use '../../../variables/basic' as vars;
+
+// @use '<url>' as <namespace>; とすることで任意の名前空間で変数などを使用できる
+@debug global-variable-exists("message", "vars"); // true
+@debug "vars.$message: #{vars.$message}";
+
+// 以下の記述は名前空間が異なるためエラー
+// @debug global-variable-exists("message", "basic"); // Error: There is no module with the namespace "basic".

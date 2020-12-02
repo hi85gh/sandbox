@@ -1,10 +1,11 @@
 /**
- * syntaxes/at-rules/use/_loading-members.scss
+ * syntaxes/at-rules/use/loading-members/_basic.scss
  */
 
-@use '../../variables/basic';
+@use '../../../variables/basic';
 
 // @import と異なり @use では $message はグローバルに展開されない
+@debug variable-exists("message"); // false
 @debug global-variable-exists("message"); // false
 @debug global-variable-exists("message", "basic"); // true
 
