@@ -1,0 +1,15 @@
+/**
+ * syntaxes/at-rules/use/_loading-members.scss
+ */
+
+@use '../../variables/basic';
+
+// @import と異なり @use では $message はグローバルに展開されない
+@debug global-variable-exists("message"); // false
+@debug global-variable-exists("message", "basic"); // true
+
+// 以下の記述は存在しない変数を参照しているためエラー
+// @debug "$message from another module: #{$message}"; // Error: Undefined variable.
+
+// 別モジュールの変数などを使用する場合は名前空間を指定する
+@debug "$message from another module: #{basic.$message}";
