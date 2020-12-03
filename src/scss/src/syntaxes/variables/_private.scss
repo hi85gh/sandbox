@@ -1,0 +1,10 @@
+/**
+ * syntaxes/variables/_private.scss
+ */
+
+// $- または $_ で始まる変数は @use で参照できないプライベートな変数となる
+$-foo: "foo";
+$_bar: "bar";
+
+@debug "Private $-foo: #{$-foo}";
+@debug "Private $_bar: #{$_bar}";

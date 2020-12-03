@@ -1,0 +1,16 @@
+/**
+ * syntaxes/variables/_private.scss
+ */
+
+@use '../../../variables/private';
+@use '../../../variables/private' as *;
+
+// $- または $_ で始まる変数などはプライベートなメンバーとなり参照できない
+@debug global-variable-exists("-foo", "private"); // false
+@debug global-variable-exists("_bar", "private"); // false
+
+// グローバルでも参照不可
+@debug variable-exists("-foo"); // false
+@debug global-variable-exists("-foo"); // false
+@debug variable-exists("_bar"); // false
+@debug global-variable-exists("_bar"); // false
