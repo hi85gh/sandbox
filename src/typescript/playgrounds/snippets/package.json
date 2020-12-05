@@ -1,0 +1,11 @@
+{
+  "private": true,
+  "scripts": {
+    "build": "tsc --outDir dist *.ts",
+    "watch": "tsc --noEmit --strict --watch *.ts",
+    "type-check": "tsc --noEmit --strict *.ts"
+  },
+  "devDependencies": {
+    "typescript": "4.1.2"
+  }
+}
