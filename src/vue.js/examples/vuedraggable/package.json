@@ -9,6 +9,7 @@
     "vuedraggable": "4.0.1"
   },
   "devDependencies": {
+    "@types/sortablejs": "1.10.6",
     "@vue/compiler-sfc": "3.0.4",
     "vite": "1.0.0-rc.13"
   }
