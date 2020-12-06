@@ -6,7 +6,7 @@
   },
   "dependencies": {
     "vue": "3.0.4",
-    "vue-draggable-next": "2.0.0"
+    "vuedraggable": "4.0.1"
   },
   "devDependencies": {
     "@vue/compiler-sfc": "3.0.4",
