@@ -15,6 +15,7 @@
 ### Packages
 
 - axios: <https://github.com/hi85gh/sandbox/tree/main/src/typescript/examples/axios>
+- dayjs: <https://github.com/hi85gh/sandbox/tree/main/src/typescript/examples/dayjs>
 - faker: <https://github.com/hi85gh/sandbox/tree/main/src/typescript/examples/faker>
 - json-server: <https://github.com/hi85gh/sandbox/tree/main/src/typescript/examples/json-server>
 - mv: <https://github.com/hi85gh/sandbox/tree/main/src/typescript/examples/mv>
