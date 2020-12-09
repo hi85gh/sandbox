@@ -1,7 +1,7 @@
 {
   "private": true,
   "scripts": {
-    "dev": "ts-node-dev --compiler-options '{\"esModuleInterop\":true,\"strict\":true}' --respawn index.ts"
+    "dev": "ts-node-dev --compiler-options '{\"esModuleInterop\":true,\"strict\":true}' --respawn src/index.ts"
   },
   "dependencies": {
     "dayjs": "1.9.7"
