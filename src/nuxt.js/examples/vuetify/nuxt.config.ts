@@ -8,6 +8,7 @@ const config: NuxtConfig = {
     customVariables: ['~/assets/variables.scss'],
     defaultAssets: false,
     optionsPath: '~~/vuetify.options.ts',
+    treeShake: true,
   },
 }
 
