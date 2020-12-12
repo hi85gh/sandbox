@@ -15,7 +15,12 @@
     "sourceMap": true,
     "strict": true,
     "target": "ES2018",
-    "types": ["@types/node", "@nuxt/types"]
+    "types": [
+      "@nuxt/types",
+      "@nuxt/typescript-build",
+      "@nuxtjs/vuetify",
+      "@types/node"
+    ]
   },
   "exclude": ["node_modules", ".nuxt", "dist"]
 }
