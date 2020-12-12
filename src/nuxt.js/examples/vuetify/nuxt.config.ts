@@ -1,6 +1,7 @@
+import type { NuxtConfig } from '@nuxt/types'
 import colors from 'vuetify/es5/util/colors'
 
-export default {
+const config: NuxtConfig = {
   buildModules: ['@nuxt/typescript-build', '@nuxtjs/vuetify'],
   components: true,
   target: 'static',
@@ -8,6 +9,7 @@ export default {
     customVariables: ['~/assets/variables.scss'],
     theme: {
       dark: true,
+      // @ts-expect-error
       themes: {
         dark: {
           primary: colors.blue.darken2,
@@ -22,3 +24,5 @@ export default {
     },
   },
 }
+
+export default config
