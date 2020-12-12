@@ -6,6 +6,7 @@ const config: NuxtConfig = {
   target: 'static',
   vuetify: {
     customVariables: ['~/assets/variables.scss'],
+    defaultAssets: false,
     optionsPath: '~~/vuetify.options.ts',
   },
 }

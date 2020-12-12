@@ -2,6 +2,9 @@ import colors from 'vuetify/es5/util/colors'
 import type { GlobalVuetifyPreset } from 'vuetify/types/services/presets'
 
 const options: GlobalVuetifyPreset = {
+  icons: {
+    iconfont: 'mdiSvg',
+  },
   theme: {
     dark: true,
     themes: {
