@@ -8,6 +8,9 @@
           </VCardTitle>
         </VCard>
       </VCol>
+      <VCol class="text-center" cols="12">
+        <NuxtLink to="/checkboxes/">checkboxes</NuxtLink>
+      </VCol>
     </VRow>
   </VContainer>
 </template>
