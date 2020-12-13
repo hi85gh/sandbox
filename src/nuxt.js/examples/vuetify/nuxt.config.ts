@@ -1,7 +1,11 @@
 import type { NuxtConfig } from '@nuxt/types'
 
 const config: NuxtConfig = {
-  buildModules: ['@nuxt/typescript-build', '@nuxtjs/vuetify'],
+  buildModules: [
+    '@nuxt/typescript-build',
+    '@nuxtjs/composition-api',
+    '@nuxtjs/vuetify',
+  ],
   components: true,
   target: 'static',
   vuetify: {
