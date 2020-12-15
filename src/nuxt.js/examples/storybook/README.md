@@ -53,6 +53,17 @@ $ echo ".nuxt-storybook" >> .gitignore && \
   echo "storybook-static" >> .gitignore
 ```
 
+## Notes
+
+`nuxt-ts storybook build` コマンド実行には `static` ディレクトリが必須。
+
+```
+ERR! Error: no such directory to load static files: sandbox/src/nuxt.js/examples/storybook/static
+
+ FATAL  Failed to run command nuxt-storybook:
+Error: Command failed with exit code 255: nuxt-storybook build
+```
+
 ## Issues
 
 - [Module not found: Error: Can't resolve 'core-js/modules/web.dom-collections.iterator' · Issue #59 · nuxt-community/storybook](https://github.com/nuxt-community/storybook/issues/59)
