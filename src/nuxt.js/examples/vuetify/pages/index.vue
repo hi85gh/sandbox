@@ -5,7 +5,7 @@ export default defineComponent({
   setup() {
     return {
       /* Readonly */
-      links: computed(() => ['checkboxes', 'switches'])
+      links: computed(() => ['checkboxes', 'switches', 'data-table'])
     }
   }
 })
@@ -23,7 +23,7 @@ export default defineComponent({
       </VCol>
     </VRow>
     <VRow align="center" class="align-self-start" justify="center">
-      <VCol v-for="link in links" :key="link" class="text-center" cols="2">
+      <VCol v-for="link in links" :key="link" class="text-center" cols="auto">
         <NuxtLink :to="`/${link}/`">{{ link }}</NuxtLink>
       </VCol>
     </VRow>

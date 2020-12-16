@@ -49,7 +49,7 @@ export default defineComponent({
 </script>
 
 <template>
-  <VContainer>
+  <VContainer class="pb-16 pt-8 px-8">
     <VRow tag="dl">
       <VCol cols="auto" tag="dt">Checkbox:</VCol>
       <VCol cols="auto" tag="dd">{{ checked }}</VCol>
