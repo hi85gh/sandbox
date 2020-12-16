@@ -24,7 +24,7 @@ type State = {
  * - https://vuetifyjs.com/en/api/v-data-table/
  */
 export default defineComponent({
-  setup(_, { emit }) {
+  setup() {
     const state = reactive<State>({
       editingText: '',
       items: [
@@ -37,29 +37,29 @@ export default defineComponent({
     return {
       /* Public */
       ...toRefs(state),
-      internalItems: computed(() =>
-        state.items.map((item, index) => ({ ...item, index }))
-      ),
 
       /* Readonly */
       headers: computed(() => headers),
+      internalItems: computed(() =>
+        state.items.map((item, index) => ({ ...item, index }))
+      ),
 
       /* Methods */
       onCancel: () => {
         console.log('VEditDialog cancel')
       },
-      onClose: (index: number) => {
+      onClose: () => {
         console.log('VEditDialog close')
-        state.items = state.items.map((item, i) =>
-          i === index ? { ...item, editable: state.editingText } : item
-        )
       },
       onOpen: (index: number) => {
         console.log('VEditDialog open')
         state.editingText = state.items[index].editable
       },
-      onSave: () => {
+      onSave: (index: number) => {
         console.log('VEditDialog save')
+        state.items = state.items.map((item, i) =>
+          i === index ? { ...item, editable: state.editingText } : item
+        )
       }
     }
   }
@@ -95,17 +95,21 @@ export default defineComponent({
           hide-default-footer
           :items="internalItems"
         >
-          <template #[`item.editable`]="{ item }">
+          <template #[`item.editable`]="{ item, header }">
             <VEditDialog
               :return-value="item.editable"
               @cancel="onCancel() /* Escape キーを押した場合のみ */"
-              @close="onClose(item.index)"
+              @close="onClose()"
               @open="onOpen(item.index)"
-              @save="onSave() /* Enter キーを押した場合のみ */"
+              @save="onSave(item.index) /* Enter キーを押した場合のみ */"
             >
               {{ item.editable }}
               <template #input>
-                <VTextField v-model="editingText" label="Editable" />
+                <VTextField
+                  v-model="editingText"
+                  autofocus
+                  :label="header.text"
+                />
               </template>
             </VEditDialog>
           </template>
