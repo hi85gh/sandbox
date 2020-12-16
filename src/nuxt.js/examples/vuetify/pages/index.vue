@@ -1,6 +1,19 @@
+<script lang="ts">
+import { computed, defineComponent } from '@nuxtjs/composition-api'
+
+export default defineComponent({
+  setup() {
+    return {
+      /* Readonly */
+      links: computed(() => ['checkboxes', 'switches'])
+    }
+  }
+})
+</script>
+
 <template>
   <VContainer class="fill-height">
-    <VRow justify="center" align="center">
+    <VRow align="center" class="align-self-end" justify="center">
       <VCol cols="8">
         <VCard>
           <VCardTitle class="headline justify-center">
@@ -8,15 +21,11 @@
           </VCardTitle>
         </VCard>
       </VCol>
-      <VCol class="text-center" cols="12">
-        <NuxtLink to="/checkboxes/">checkboxes</NuxtLink>
+    </VRow>
+    <VRow align="center" class="align-self-start" justify="center">
+      <VCol v-for="link in links" :key="link" class="text-center" cols="2">
+        <NuxtLink :to="`/${link}/`">{{ link }}</NuxtLink>
       </VCol>
     </VRow>
   </VContainer>
 </template>
-
-<script lang="ts">
-import Vue from 'vue'
-
-export default Vue.extend({})
-</script>

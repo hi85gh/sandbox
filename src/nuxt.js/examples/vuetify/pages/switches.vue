@@ -11,22 +11,22 @@ const values = ['foo', 'bar', 'baz'] as const
 type Value = typeof values[number]
 
 type State = {
-  checked: boolean
-  checkedValues: Value[]
+  switched: boolean
+  switchedValues: Value[]
 }
 
 /**
- * Vuetify の VCheckbox コンポーネントについて
+ * Vuetify の VSwitch コンポーネントについて
  *
  * References:
- * - https://vuetifyjs.com/en/components/checkboxes/
- * - https://vuetifyjs.com/en/api/v-checkbox/
+ * - https://vuetifyjs.com/en/components/switches/
+ * - https://vuetifyjs.com/en/api/v-switch/
  */
 export default defineComponent({
   setup() {
     const state = reactive<State>({
-      checked: false,
-      checkedValues: []
+      switched: false,
+      switchedValues: []
     })
 
     return {
@@ -38,10 +38,10 @@ export default defineComponent({
 
       /* Methods */
       onChange: (value: boolean) => {
-        state.checked = value
+        state.switched = value
       },
       onChangeValues: (value: Value[]) => {
-        state.checkedValues = value
+        state.switchedValues = value
       }
     }
   }
@@ -51,17 +51,17 @@ export default defineComponent({
 <template>
   <VContainer>
     <VRow tag="dl">
-      <VCol cols="auto" tag="dt">Checkbox:</VCol>
-      <VCol cols="auto" tag="dd">{{ checked }}</VCol>
+      <VCol cols="auto" tag="dt">Switch:</VCol>
+      <VCol cols="auto" tag="dd">{{ switched }}</VCol>
     </VRow>
     <VRow tag="ul">
       <VCol cols="6" tag="li">
-        <VCheckbox v-model="checked" label="Use v-model" />
+        <VSwitch v-model="switched" label="Use v-model" />
       </VCol>
       <VCol cols="6" tag="li">
-        <VCheckbox
+        <VSwitch
           label="Do not use v-model"
-          :value="checked"
+          :value="switched"
           :true-value="
             /* false-value を使用する場合 true-value も必要 */
             true
@@ -76,26 +76,26 @@ export default defineComponent({
     </VRow>
     <VDivider />
     <VRow tag="dl">
-      <VCol cols="auto" tag="dt">Checkboxes:</VCol>
-      <VCol cols="auto" tag="dd">{{ checkedValues }}</VCol>
+      <VCol cols="auto" tag="dt">Switches:</VCol>
+      <VCol cols="auto" tag="dd">{{ switchedValues }}</VCol>
     </VRow>
     <VRow>
       <VCol cols="6" tag="dl">
         <dt>Use v-model</dt>
         <dd v-for="value in values" :key="value">
-          <VCheckbox v-model="checkedValues" :label="value" :value="value" />
+          <VSwitch v-model="switchedValues" :label="value" :value="value" />
         </dd>
       </VCol>
       <VCol cols="6" tag="dl">
         <dt>Do not use v-model</dt>
         <dd v-for="value in values" :key="value">
-          <VCheckbox
+          <VSwitch
             :input-value="
               /**
                * model.prop に設定する値
                * Reference: https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/mixins/selectable/index.ts
                */
-              checkedValues
+              switchedValues
             "
             :label="value"
             :value="value"
