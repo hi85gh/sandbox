@@ -1,6 +1,25 @@
 import type { NuxtConfig } from '@nuxt/types'
 
 const config: NuxtConfig = {
+  build: {
+    postcss: {
+      plugins: {
+        ...(process.env.NODE_ENV === 'production'
+          ? {
+              '@fullhuman/postcss-purgecss': {
+                content: [
+                  './components/**/*.vue',
+                  './layouts/**/*.vue',
+                  './pages/**/*.vue',
+                  './node_modules/vuetify/dist/vuetify.js',
+                ],
+                safelist: ['html', 'body', /^col.*$/],
+              },
+            }
+          : {}),
+      },
+    },
+  },
   buildModules: [
     '@nuxt/typescript-build',
     '@nuxtjs/composition-api',
