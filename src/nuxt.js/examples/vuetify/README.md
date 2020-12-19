@@ -139,4 +139,31 @@ References:
 
 PurgeCSS を利用し不要な CSS を削除する。
 
-PurgeCSS: <https://purgecss.com/>
+References:
+
+- <https://purgecss.com/>
+- <https://purgecss.com/guides/nuxt.html#postcss-plugin>
+
+```ts
+export default {
+  build: {
+    postcss: {
+      plugins: {
+        "@fullhuman/postcss-purgecss": {
+          content: [
+            "./components/**/*.vue",
+            "./layouts/**/*.vue",
+            "./pages/**/*.vue",
+            "./node_modules/vuetify/dist/vuetify.js", // Vuetify のファイルを追加
+          ],
+          safelist: [
+            "html",
+            "body",
+            /^col.*$/, // 必要な class を追加
+          ],
+        },
+      },
+    },
+  },
+};
+```
