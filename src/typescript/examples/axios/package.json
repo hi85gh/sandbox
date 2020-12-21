@@ -4,10 +4,10 @@
     "get": "ts-node --compiler-options '{\"strict\":true}' src/get.ts"
   },
   "dependencies": {
-    "axios": "0.21.0"
+    "axios": "0.21.1"
   },
   "devDependencies": {
-    "ts-node": "9.0.0",
-    "typescript": "4.0.5"
+    "ts-node": "9.1.1",
+    "typescript": "4.1.3"
   }
 }
