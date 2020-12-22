@@ -5,7 +5,7 @@ export default defineComponent({
   setup() {
     return {
       /* Readonly */
-      links: computed(() => ['checkboxes', 'switches', 'data-table'])
+      links: computed(() => ['checkboxes', 'switches', 'data-table', 'theme'])
     }
   }
 })
