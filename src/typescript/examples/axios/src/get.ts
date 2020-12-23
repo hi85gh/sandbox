@@ -1,4 +1,5 @@
 import axios from 'axios'
+import type { AxiosError } from 'axios'
 
 /**
  * Example: IP アドレスの情報を取得
@@ -10,6 +11,6 @@ axios
   .then(({ data }) => {
     console.log(data)
   })
-  .catch((error) => {
+  .catch((error: AxiosError) => {
     console.error(error)
   })

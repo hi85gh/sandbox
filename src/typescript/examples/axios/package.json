@@ -1,7 +1,9 @@
 {
   "private": true,
   "scripts": {
-    "get": "ts-node-dev --respawn --compiler-options '{\"strict\":true}' src/get.ts"
+    "dev": "ts-node-dev --respawn --compiler-options '{\"strict\":true}'",
+    "get": "npm run dev src/get.ts",
+    "interceptors": "npm run dev src/interceptors.ts"
   },
   "dependencies": {
     "axios": "0.21.1"
