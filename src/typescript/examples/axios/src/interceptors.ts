@@ -1,7 +1,13 @@
 import axios from 'axios'
+import MockAdapter from 'axios-mock-adapter'
 
 const axiosInstance = axios.create()
 
+/* Mock */
+const mock = new MockAdapter(axiosInstance)
+mock.onGet('/api').reply(200, { message: 'Hello, World!' })
+
+/* Interceptors */
 axiosInstance.interceptors.request.use((config) => {
   console.log('Request url: ', config.url)
   console.log('Request params: ', config.params)
@@ -21,4 +27,4 @@ axiosInstance.interceptors.response.use((response) => {
   return response
 })
 
-axiosInstance.get('https://ipinfo.io')
+axiosInstance.get('/api')
