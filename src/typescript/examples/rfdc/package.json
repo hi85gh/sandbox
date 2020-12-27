@@ -1,0 +1,14 @@
+{
+  "private": true,
+  "scripts": {
+    "dev": "ts-node-dev --respawn --compiler-options '{\"esModuleInterop\":true,\"strict\":true}' index.ts"
+  },
+  "dependencies": {
+    "rfdc": "1.1.4"
+  },
+  "devDependencies": {
+    "@types/rfdc": "1.1.0",
+    "ts-node-dev": "1.1.1",
+    "typescript": "4.1.3"
+  }
+}
