@@ -25,7 +25,7 @@ type State = {
 export default defineComponent({
   setup() {
     const state = reactive<State>({
-      switched: false,
+      switched: true,
       switchedValues: []
     })
 
@@ -61,14 +61,14 @@ export default defineComponent({
       <VCol cols="6" tag="li">
         <VSwitch
           label="Do not use v-model"
-          :value="switched"
-          :true-value="
-            /* false-value を使用する場合 true-value も必要 */
-            true
-          "
           :false-value="
             /* デフォルトの null から変更 */
             false
+          "
+          :input-value="switched"
+          :true-value="
+            /* false-value を使用する場合 true-value も必要 */
+            true
           "
           @change="onChange"
         />
