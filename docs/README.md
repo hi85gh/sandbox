@@ -17,6 +17,7 @@
 - [Node.js](developments/node.js/README.md)
 - [Nuxt.js](developments/nuxt.js/README.md)
 - [React](developments/react/README.md)
+- [Renovate](developments/renovate/README.md)
 - [TypeScript](developments/typescript/README.md)
 - [Vue.js](developments/vue.js/README.md)
 
