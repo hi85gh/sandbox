@@ -27,5 +27,22 @@
         }
       }
     ]
+  },
+  "renovate": {
+    "extends": [
+      "config:base",
+      "npm:unpublishSafe",
+      ":dependencyDashboardApproval",
+      ":label(renovate)",
+      ":prHourlyLimitNone",
+      ":rebaseStalePrs",
+      ":semanticCommitTypeAll(chore)",
+      ":semanticCommits",
+      ":timezone(Asia/Tokyo)"
+    ],
+    "npm": {
+      "commitMessageTopic": "{{prettyDepType}} {{depName}}",
+      "rangeStrategy": "bump"
+    }
   }
 }
