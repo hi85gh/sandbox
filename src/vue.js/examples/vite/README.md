@@ -1,4 +1,4 @@
-# Vite
+# vite
 
 - Repository: <https://github.com/vitejs/vite>
 - Changelog: <https://github.com/vitejs/vite/blob/master/CHANGELOG.md>
@@ -16,15 +16,16 @@ $ node_modules/.bin/vite -v
 vite v1.0.0-rc.4
 ```
 
-## Features
+## Notes
 
 ### Disable Options API
 
 `define` オプションに `__VUE_OPTIONS_API__: false` を設定することで Options API を無効化することができる。
 
-- References:
-  - [vue-next/packages/vue at master · vuejs/vue-next](https://github.com/vuejs/vue-next/tree/master/packages/vue#bundler-build-feature-flags)
-  - [kazu_pon / Twitter](https://twitter.com/kazu_pon/status/1306991285660606466)
+References:
+
+- <https://github.com/vuejs/vue-next/tree/master/packages/vue#bundler-build-feature-flags>
+- <https://twitter.com/kazu_pon/status/1306991285660606466>
 
 1.  `define.__VUE_OPTIONS_API__`: `true` (default)
 
@@ -62,18 +63,76 @@ vite v1.0.0-rc.4
     Build completed in 3.08s.
     ```
 
-## Issues
+### Use aliases
 
-- Vue 3 を使用する場合は Vetur の設定を変更する
-  - [Linting / Error Checking | Vetur](https://vuejs.github.io/vetur/linting-error.html#error-checking)
-- `.vue` ファイル内で `alias` を使用して `.ts` ファイルを `import` しようとすると Vetur でエラーが発生
-  ```vue
-  <script lang="ts">
-  import Foo from "/@/Foo.vue"; // OK
-  import { bar } from "/@/bar"; // Cannot find module '/@/bar' or its corresponding type declarations.Vetur(2307)
-  </script>
-  ```
-  - `tsconfig.json` に `compilerOptions.paths` を設定しても Vetur のエラーは解決できない
-  - `.vue` ファイルではなく `.ts` ファイル（`render` 関数）を使用すると問題なし
-  - Vite は問題なく動作する
-  - Vite はデフォルトでプロジェクトの `root` フォルダからのルート相対パスでファイルを `import` できるが、TypeScript（`<script lang="ts">` を設定した `.vue` ファイル）では Vetur のエラーが発生する
+Vite はデフォルトでルート相対パス指定による `import` ができるが TypeScript を使用する場合は `alias` を設定する。
+
+References:
+
+- <https://github.com/vitejs/vite/issues/300>
+- <https://github.com/vitejs/vite/issues/300#issuecomment-708944488>
+
+`vite.config.ts`
+
+```ts
+import { resolve } from "path";
+import { UserConfig } from "vite/dist/node/config";
+
+const config: UserConfig = {
+  alias: {
+    "/@/": resolve(__dirname, "src"), // path aliases must start with / and end with /.
+  },
+  resolvers: [
+    {
+      alias: (id) => id.replace(/^@\//, "/@/"), // add slash to particular id, then vite won't resolve it as a module
+    },
+  ],
+};
+
+export default config;
+```
+
+`tsconfig.json`
+
+```json
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"]
+    }
+  }
+}
+```
+
+#### Caution
+
+以下の設定は Vite は動作するが `tsconfig.json` で絶対パスによる指定が許可されていないため問題がある。
+
+`vite.config.ts`
+
+```ts
+import { resolve } from "path";
+import { UserConfig } from "vite/dist/node/config";
+
+const config: UserConfig = {
+  alias: {
+    "/@/": resolve(__dirname, "src"),
+  },
+};
+
+export default config;
+```
+
+`tsconfig.json`
+
+```json
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "/@/*": ["./src/*"]
+    }
+  }
+}
+```
