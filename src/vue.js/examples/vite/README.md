@@ -1,5 +1,6 @@
 # vite
 
+- Official site: <https://vitejs.dev/>
 - Repository: <https://github.com/vitejs/vite>
 - Changelog: <https://github.com/vitejs/vite/blob/master/CHANGELOG.md>
 
@@ -67,6 +68,44 @@ References:
 
 Vite はデフォルトでルート相対パス指定による `import` ができるが TypeScript を使用する場合は `alias` を設定する。
 
+#### v2
+
+Reference: <https://vitejs.dev/config/#alias>
+
+`vite.config.ts`
+
+```ts
+import vue from "@vitejs/plugin-vue";
+import { UserConfig } from "vite";
+
+const config: UserConfig = {
+  alias: [
+    {
+      find: /^@\//,
+      replacement: "/src/",
+    },
+  ],
+  plugins: [vue()],
+};
+
+export default config;
+```
+
+`tsconfig.json`
+
+```json
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"]
+    }
+  }
+}
+```
+
+#### v1
+
 References:
 
 - <https://github.com/vitejs/vite/issues/300>
@@ -100,38 +139,6 @@ export default config;
     "baseUrl": ".",
     "paths": {
       "@/*": ["./src/*"]
-    }
-  }
-}
-```
-
-#### Caution
-
-以下の設定は Vite は動作するが `tsconfig.json` で絶対パスによる指定が許可されていないため問題がある。
-
-`vite.config.ts`
-
-```ts
-import { resolve } from "path";
-import { UserConfig } from "vite/dist/node/config";
-
-const config: UserConfig = {
-  alias: {
-    "/@/": resolve(__dirname, "src"),
-  },
-};
-
-export default config;
-```
-
-`tsconfig.json`
-
-```json
-{
-  "compilerOptions": {
-    "baseUrl": ".",
-    "paths": {
-      "/@/*": ["./src/*"]
     }
   }
 }
