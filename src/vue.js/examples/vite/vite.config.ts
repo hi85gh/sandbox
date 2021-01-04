@@ -1,9 +1,16 @@
 import { resolve } from 'path'
-import { UserConfig } from 'vite/dist/node/config'
+import vue from '@vitejs/plugin-vue'
+import { UserConfig } from 'vite'
 
 const config: UserConfig = {
-  alias: {
-    '/@/': resolve(__dirname, 'src'),
+  alias: [
+    {
+      find: /^@\//,
+      replacement: '/',
+    },
+  ],
+  build: {
+    outDir: resolve(__dirname, 'dist'),
   },
   define: {
     /**
@@ -12,15 +19,7 @@ const config: UserConfig = {
      */
     __VUE_OPTIONS_API__: false,
   },
-  outDir: resolve(__dirname, 'dist'),
-  resolvers: [
-    {
-      /**
-       * Reference: https://github.com/vitejs/vite/issues/300#issuecomment-708944488
-       */
-      alias: (id) => id.replace(/^@\//, '/@/'),
-    },
-  ],
+  plugins: [vue()],
   root: resolve(__dirname, 'src'),
 }
 
