@@ -12,8 +12,10 @@
 ### Packages
 
 - @nuxtjs/composition-api: <https://github.com/hi85gh/sandbox/tree/main/src/nuxt.js/examples/composition-api>
+- @nuxtjs/sitemap: <https://github.com/hi85gh/sandbox/tree/main/src/nuxt.js/examples/sitemap>
 - @nuxtjs/storybook: <https://github.com/hi85gh/sandbox/tree/main/src/nuxt.js/examples/storybook>
 - @nuxtjs/tailwindcss: <https://github.com/hi85gh/sandbox/tree/main/src/nuxt.js/examples/tailwindcss>
+- @nuxtjs/vuetify: <https://github.com/hi85gh/sandbox/tree/main/src/nuxt.js/examples/vuetify>
 - nuxt-typed-vuex: <https://github.com/hi85gh/sandbox/tree/main/src/nuxt.js/examples/nuxt-typed-vuex>
 
 ### Miscellaneous

@@ -1,20 +1,54 @@
-# sitemap
+# @nuxtjs/sitemap
 
-## Build Setup
+- Repository: <https://github.com/nuxt-community/sitemap-module>
+- Documentation: <https://sitemap.nuxtjs.org/>
+- Changelog: <https://github.com/nuxt-community/sitemap-module/blob/dev/CHANGELOG.md>
 
-```bash
-# install dependencies
-$ npm install
+## Setup
 
-# serve with hot reload at localhost:3000
-$ npm run dev
+```sh
+$ npx create-nuxt-app sitemap
 
-# build for production and launch server
-$ npm run build
-$ npm run start
+create-nuxt-app v3.4.0
+✨  Generating Nuxt.js project in sitemap
+? Project name: sitemap
+? Programming language: TypeScript
+? Package manager: Npm
+? UI framework: None
+? Nuxt.js modules:
+? Linting tools:
+? Testing framework: None
+? Rendering mode: Universal (SSR / SSG)
+? Deployment target: Static (Static/JAMStack hosting)
+? Development tools:
+? What is your GitHub username?
+? Version control system: None
 
-# generate static project
-$ npm run generate
+$ cd sitemap
+
+$ node_modules/.bin/nuxt-ts --version
+@nuxt/cli v2.14.12
+
+$ rm -rf \
+  .editorconfig \
+  .gitignore \
+  assets \
+  components/README.md \
+  layouts/README.md \
+  middleware \
+  pages/README.md \
+  plugins \
+  static/README.md \
+  store
 ```
 
-For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
+`nuxt.config.js`
+
+```diff
+export default {
++ modules: ['@nuxtjs/sitemap'],
++ sitemap: {
++   hostname: 'http://localhost/',
++ },
+}
+```
