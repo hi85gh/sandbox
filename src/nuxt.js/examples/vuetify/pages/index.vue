@@ -5,9 +5,15 @@ export default defineComponent({
   setup() {
     return {
       /* Readonly */
-      links: computed(() => ['checkboxes', 'switches', 'data-table', 'theme'])
+      links: computed(() => [
+        'checkboxes',
+        'data-table',
+        'switches',
+        'theme',
+        'wrappers',
+      ]),
     }
-  }
+  },
 })
 </script>
 
