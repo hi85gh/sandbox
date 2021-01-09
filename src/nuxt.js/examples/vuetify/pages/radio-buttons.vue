@@ -39,6 +39,9 @@ export default defineComponent({
       onChange: (value: Value) => {
         state.radioGroup = value
       },
+      onClick: (value: Value) => {
+        state.radioGroup = state.radioGroup === value ? '' : value
+      },
     }
   },
 })
@@ -51,7 +54,7 @@ export default defineComponent({
       <VCol cols="auto" tag="dd">{{ radioGroup }}</VCol>
     </VRow>
     <VRow>
-      <VCol cols="6" tag="dl">
+      <VCol cols="4" tag="dl">
         <dt>Use v-model</dt>
         <dd>
           <VRadioGroup v-model="radioGroup">
@@ -64,7 +67,7 @@ export default defineComponent({
           </VRadioGroup>
         </dd>
       </VCol>
-      <VCol cols="6" tag="dl">
+      <VCol cols="4" tag="dl">
         <dt>Do not use v-model</dt>
         <dd>
           <VRadioGroup :value="radioGroup" @change="onChange">
@@ -73,6 +76,20 @@ export default defineComponent({
               :key="value"
               :label="value"
               :value="value"
+            />
+          </VRadioGroup>
+        </dd>
+      </VCol>
+      <VCol cols="4" tag="dl">
+        <dt>Deselectable radio buttons</dt>
+        <dd>
+          <VRadioGroup :value="radioGroup">
+            <VRadio
+              v-for="value in values"
+              :key="value"
+              :label="value"
+              :value="value"
+              @click="onClick(value)"
             />
           </VRadioGroup>
         </dd>
