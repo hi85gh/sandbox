@@ -8,6 +8,7 @@ export default defineComponent({
       links: computed(() => [
         'checkboxes',
         'data-table',
+        'radio-buttons',
         'switches',
         'theme',
         'wrappers',
