@@ -7,6 +7,7 @@ export default defineComponent({
       /* Readonly */
       links: computed(() => [
         'checkboxes',
+        'content-header',
         'data-table',
         'radio-buttons',
         'switches',
