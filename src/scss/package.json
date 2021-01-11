@@ -8,6 +8,6 @@
     "clean": "node --eval \"require('fs').rmdirSync('dist', { recursive: true })\""
   },
   "devDependencies": {
-    "sass": "1.29.0"
+    "sass": "1.32.2"
   }
 }
