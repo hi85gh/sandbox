@@ -4,7 +4,7 @@
     "dev-reflection-proxy": "ts-node-dev --compiler-options '{\"target\":\"es2015\",\"strict\":true}' src/reflection/proxy.ts"
   },
   "devDependencies": {
-    "ts-node-dev": "1.0.0",
+    "ts-node-dev": "1.1.1",
     "typescript": "4.0.5"
   }
 }
