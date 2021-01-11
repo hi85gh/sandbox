@@ -14,7 +14,7 @@ export default Vue.extend({
   computed: {
     message() {
       return this.$accessor.example.message
-    }
-  }
+    },
+  },
 })
 </script>

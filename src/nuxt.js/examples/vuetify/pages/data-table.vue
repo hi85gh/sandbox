@@ -3,12 +3,12 @@ import {
   computed,
   defineComponent,
   reactive,
-  toRefs
+  toRefs,
 } from '@nuxtjs/composition-api'
 import type { DataTableHeader } from 'vuetify'
 
 const headers: DataTableHeader[] = [
-  { sortable: false, text: 'Editable', value: 'editable' }
+  { sortable: false, text: 'Editable', value: 'editable' },
 ]
 
 type State = {
@@ -30,8 +30,8 @@ export default defineComponent({
       items: [
         { editable: 'text 1' },
         { editable: 'text 2' },
-        { editable: 'text 3' }
-      ]
+        { editable: 'text 3' },
+      ],
     })
 
     return {
@@ -60,9 +60,9 @@ export default defineComponent({
         state.items = state.items.map((item, i) =>
           i === index ? { ...item, editable: state.editingText } : item
         )
-      }
+      },
     }
-  }
+  },
 })
 </script>
 

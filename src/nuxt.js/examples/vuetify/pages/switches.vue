@@ -3,7 +3,7 @@ import {
   computed,
   defineComponent,
   reactive,
-  toRefs
+  toRefs,
 } from '@nuxtjs/composition-api'
 
 const values = ['foo', 'bar', 'baz'] as const
@@ -26,7 +26,7 @@ export default defineComponent({
   setup() {
     const state = reactive<State>({
       switched: true,
-      switchedValues: []
+      switchedValues: [],
     })
 
     return {
@@ -42,9 +42,9 @@ export default defineComponent({
       },
       onChangeValues: (value: Value[]) => {
         state.switchedValues = value
-      }
+      },
     }
-  }
+  },
 })
 </script>
 

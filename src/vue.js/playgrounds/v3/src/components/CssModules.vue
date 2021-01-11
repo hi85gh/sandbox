@@ -16,7 +16,7 @@ export default defineComponent({})
        * ```
        */
       $style.fontColor,
-      $style.fontStyle
+      $style.fontStyle,
     ]"
   >
     CssModules component.
