@@ -9,6 +9,10 @@ const plugin: Plugin = async (context) => {
     if (context.isDev) {
       console.error(error)
     }
+  } finally {
+    window.onNuxtReady(() => {
+      alert('Nuxt is ready.')
+    })
   }
 }
 
