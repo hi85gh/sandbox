@@ -2,18 +2,7 @@
   <div>
     <div>
       <h1>nuxt-client-init-plugin</h1>
-      <div>
-        <a href="https://nuxtjs.org/" target="_blank" rel="noopener noreferrer">
-          Documentation
-        </a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          GitHub
-        </a>
-      </div>
+      <p><NuxtLink to="/secret">Secret page</NuxtLink></p>
     </div>
   </div>
 </template>
@@ -26,6 +15,6 @@ export default Vue.extend({
     if (process.client) {
       alert('created')
     }
-  },
+  }
 })
 </script>
