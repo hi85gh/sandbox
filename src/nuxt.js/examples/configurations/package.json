@@ -3,11 +3,15 @@
   "scripts": {
     "dev": "nuxt-ts",
     "dev:add-alias-to-routes": "nuxt-ts --config-file nuxt.config.add-alias-to-routes",
+    "dev:enable-experimental-features": "nuxt-ts --config-file nuxt.config.enable-experimental-features",
     "build": "nuxt-ts build",
     "start": "nuxt-ts start",
     "generate": "nuxt-ts generate",
     "generate:delete-file-after-generated": "nuxt-ts generate --config-file nuxt.config.delete-file-after-generated",
-    "generate:generate-for-local": "nuxt-ts generate --config-file nuxt.config.generate-for-local"
+    "generate:generate-for-local": "nuxt-ts generate --config-file nuxt.config.generate-for-local",
+    "clear:cache:cache-loader": "node --eval \"require('fs').rmdirSync('node_modules/.cache/cache-loader', { recursive: true })\"",
+    "clear:cache:hard-source": "node --eval \"require('fs').rmdirSync('node_modules/.cache/hard-source', { recursive: true })\"",
+    "clear:cache": "npm run clear:cache:cache-loader && npm run clear:cache:hard-source"
   },
   "dependencies": {
     "@nuxt/typescript-runtime": "2.0.0",
