@@ -4,9 +4,9 @@
     "dev": "ts-node-dev --respawn --transpile-only index.ts"
   },
   "devDependencies": {
-    "@types/faker": "5.1.2",
-    "faker": "5.1.0",
-    "ts-node-dev": "1.0.0-pre.63",
-    "typescript": "4.0.3"
+    "@types/faker": "5.1.6",
+    "faker": "5.4.0",
+    "ts-node-dev": "1.1.1",
+    "typescript": "4.1.5"
   }
 }

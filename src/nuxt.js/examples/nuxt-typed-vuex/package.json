@@ -7,13 +7,13 @@
     "generate": "nuxt-ts generate"
   },
   "dependencies": {
-    "@nuxt/typescript-runtime": "2.0.0",
-    "core-js": "3.7.0",
-    "nuxt": "2.14.7",
+    "@nuxt/typescript-runtime": "2.0.1",
+    "core-js": "3.8.3",
+    "nuxt": "2.14.12",
     "nuxt-typed-vuex": "0.1.22"
   },
   "devDependencies": {
-    "@nuxt/types": "2.14.7",
-    "@nuxt/typescript-build": "2.0.3"
+    "@nuxt/types": "2.14.12",
+    "@nuxt/typescript-build": "2.0.4"
   }
 }

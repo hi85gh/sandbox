@@ -1,6 +1,6 @@
 {
   "private": true,
   "dependencies": {
-    "swiper": "6.2.0"
+    "swiper": "6.4.11"
   }
 }

@@ -8,13 +8,13 @@
     "storybook-eject": "nuxt-ts storybook eject"
   },
   "dependencies": {
-    "@nuxt/typescript-runtime": "2.0.0",
-    "core-js": "3.8.1",
-    "nuxt": "2.14.11"
+    "@nuxt/typescript-runtime": "2.0.1",
+    "core-js": "3.8.3",
+    "nuxt": "2.14.12"
   },
   "devDependencies": {
-    "@nuxt/types": "2.14.11",
-    "@nuxt/typescript-build": "2.0.3",
-    "@nuxtjs/storybook": "3.3.0"
+    "@nuxt/types": "2.14.12",
+    "@nuxt/typescript-build": "2.0.4",
+    "@nuxtjs/storybook": "3.3.1"
   }
 }
