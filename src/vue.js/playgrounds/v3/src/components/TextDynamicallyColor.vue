@@ -16,8 +16,9 @@ export default defineComponent({
   <p class="text">TextDynamicallyColor component.</p>
 </template>
 
-<style scoped vars="{ color }">
+<style scoped>
 .text {
-  color: var(--color, red);
+  /* Reference: https://github.com/vuejs/rfcs/pull/231 */
+  color: v-bind('color');
 }
 </style>
