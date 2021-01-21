@@ -29,3 +29,8 @@ Vue 3 を使用する場合は Vetur の設定を変更。
 
 - Reference:
   - <https://vuejs.github.io/vetur/guide/linting-error.html>
+
+### Experimentals
+
+- SFC style CSS variable injection (new edition) by yyx990803 · Pull Request #231 · vuejs/rfcs: <https://github.com/vuejs/rfcs/pull/231>
+  - Old version: <https://github.com/vuejs/rfcs/pull/226>
