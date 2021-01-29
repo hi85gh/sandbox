@@ -1,12 +1,12 @@
 <template>
-  <HelloWorld msg="Hello Vue 3 + TypeScript + Vite" />
+  <HelloWorld msg="Hello Vue 2 + TypeScript + Vite" />
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue'
+import Vue from 'vue'
 import HelloWorld from './components/HelloWorld.vue'
 
-export default defineComponent({
+export default Vue.extend({
   name: 'App',
   components: {
     HelloWorld,
