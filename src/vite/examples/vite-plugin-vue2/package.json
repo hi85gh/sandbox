@@ -6,6 +6,7 @@
     "serve": "vite preview"
   },
   "dependencies": {
+    "@vue/composition-api": "1.0.0-rc.1",
     "vue": "2.6.12"
   },
   "devDependencies": {
