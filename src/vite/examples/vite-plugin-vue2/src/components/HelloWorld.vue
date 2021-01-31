@@ -59,9 +59,9 @@
 </template>
 
 <script lang="ts">
-import Vue from 'vue'
+import { ref, defineComponent } from '@vue/composition-api'
 
-export default Vue.extend({
+export default defineComponent({
   name: 'HelloWorld',
   props: {
     msg: {
@@ -69,12 +69,12 @@ export default Vue.extend({
       required: true,
     },
   },
-  data() {
-    return {
-      count: 0,
-      useScriptSetup: false,
-      useTsPlugin: false,
-    }
+  setup: () => {
+    const count = ref(0)
+    const useScriptSetup = ref(false)
+    const useTsPlugin = ref(false)
+
+    return { count, useScriptSetup, useTsPlugin }
   },
 })
 </script>
