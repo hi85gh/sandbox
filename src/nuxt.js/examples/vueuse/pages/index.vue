@@ -1,3 +1,9 @@
+<script lang="ts">
+import { defineComponent } from '@nuxtjs/composition-api'
+
+export default defineComponent({})
+</script>
+
 <template>
   <div class="container">
     <div>
@@ -17,9 +23,3 @@
     </div>
   </div>
 </template>
-
-<script lang="ts">
-import Vue from 'vue'
-
-export default Vue.extend({})
-</script>
