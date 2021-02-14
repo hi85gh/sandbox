@@ -1,20 +1,54 @@
-# vueuse
+# @vueuse/core
 
-## Build Setup
+- Official site: <https://vueuse.js.org/>
+- Repository: <https://github.com/vueuse/vueuse>
+- Release notes: <https://github.com/vueuse/vueuse/releases>
 
-```bash
-# install dependencies
-$ npm install
+## Setup
 
-# serve with hot reload at localhost:3000
-$ npm run dev
+```sh
+$ npm init nuxt-app vueuse
 
-# build for production and launch server
-$ npm run build
-$ npm run start
+create-nuxt-app v3.5.2
+✨  Generating Nuxt.js project in vueuse
+? Project name: vueuse
+? Programming language: TypeScript
+? Package manager: Npm
+? UI framework: None
+? Nuxt.js modules:
+? Linting tools:
+? Testing framework: None
+? Rendering mode: Universal (SSR / SSG)
+? Deployment target: Static (Static/JAMStack hosting)
+? Development tools:
+? What is your GitHub username?
+? Version control system: None
 
-# generate static project
-$ npm run generate
+$ cd vueuse
+
+$ node_modules/.bin/nuxt-ts --version
+@nuxt/cli v2.14.12
+
+$ rm -rf \
+  .editorconfig \
+  .gitignore \
+  assets \
+  components/README.md \
+  layouts/README.md \
+  middleware \
+  pages/README.md \
+  plugins \
+  static \
+  store
+
+$ npm install @vueuse/core @nuxtjs/composition-api --save-exact
 ```
 
-For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
+`nuxt.config.js`
+
+```diff
+export default {
+- buildModules: ['@nuxt/typescript-build'],
++ buildModules: ['@nuxt/typescript-build', '@nuxtjs/composition-api'],
+}
+```
