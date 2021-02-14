@@ -1,25 +1,20 @@
 <script lang="ts">
 import { defineComponent } from '@nuxtjs/composition-api'
+import { useMouse } from '@vueuse/core'
 
-export default defineComponent({})
+export default defineComponent({
+  setup() {
+    const { x, y } = useMouse({ touch: false })
+
+    return { x, y }
+  }
+})
 </script>
 
 <template>
   <div class="container">
-    <div>
-      <h1>vueuse</h1>
-      <div>
-        <a href="https://nuxtjs.org/" target="_blank" rel="noopener noreferrer">
-          Documentation
-        </a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          GitHub
-        </a>
-      </div>
-    </div>
+    <h1>vueuse</h1>
+    <p>Mouse x: {{ x }}</p>
+    <p>Mouse y: {{ y }}</p>
   </div>
 </template>
