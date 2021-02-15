@@ -28,5 +28,6 @@
 ### Packages
 
 - @vue/cli: <https://github.com/hi85gh/sandbox/blob/main/src/vue.js/examples/cli>
+- @vueuse/core: <https://github.com/hi85gh/sandbox/blob/main/src/vue.js/examples/vueuse>
 - vue-router: <https://github.com/hi85gh/sandbox/tree/main/src/vue.js/examples/vue-router>
 - vuedraggable: <https://github.com/hi85gh/sandbox/tree/main/src/vue.js/examples/vuedraggable>

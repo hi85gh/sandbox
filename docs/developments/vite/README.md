@@ -4,6 +4,12 @@
 - Repository: <https://github.com/vitejs/vite>
 - Changelog: <https://github.com/vitejs/vite/blob/main/packages/vite/CHANGELOG.md>
 
+## Examples
+
+### Packages
+
+- vite-plugin-vue2: <https://github.com/hi85gh/sandbox/tree/main/src/vite/examples/vite-plugin-vue2>
+
 ## Templates
 
 - react-ts: <https://github.com/hi85gh/sandbox/tree/main/src/vite/templates/react-ts>
