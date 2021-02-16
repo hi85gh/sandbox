@@ -46,3 +46,27 @@ $ rm -rf \
   static \
   store
 ```
+
+## Notes
+
+### Purge layers by default
+
+`node_modules/.bin/nuxt generate` で以下の警告が表示された場合、設定を追加する。
+
+```sh
+ WARN  warn - The conservative purge mode will be removed in Tailwind 2.0.
+ WARN  warn - Please switch to the new layers mode instead.
+```
+
+`nuxt.config.js` の `tailwindcss` プロパティは `future` オプション未対応のため `tailwind.config.js` を追加する。
+\*@nuxtjs/tailwindcss `v3.4.2` で確認
+
+```js
+module.exports = {
+  future: {
+    purgeLayersByDefault: true,
+  },
+};
+```
+
+Reference: <https://v1.tailwindcss.com/docs/upcoming-changes#purge-layers-by-default>
