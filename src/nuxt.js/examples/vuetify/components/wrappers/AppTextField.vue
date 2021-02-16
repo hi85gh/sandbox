@@ -8,10 +8,14 @@ export default defineComponent({
 
 <template>
   <VTextField v-bind="$attrs" v-on="$listeners">
-    <template v-for="name in Object.keys($slots)" #[name]>
-      <slot :name="name">
-        {{ name }}
-      </slot>
+    <template v-for="(_, slot) in $slots" #[slot]>
+      <slot :name="slot" />
+    </template>
+    <template
+      v-for="key in Object.keys($scopedSlots).filter((key) => !$slots[key])"
+      #[key]="scope"
+    >
+      <slot :name="key" v-bind="scope" />
     </template>
   </VTextField>
 </template>
