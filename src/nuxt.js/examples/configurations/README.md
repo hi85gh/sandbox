@@ -79,6 +79,27 @@ Commentaries:
 
 ### `nuxt.config.generate-for-local.ts`
 
+<hr />
+
+**以下の設定は `v2.15.0` 以降機能しない**
+
+Reference: https://github.com/nuxt/nuxt.js/releases/tag/v2.15.0
+
+以下のプルリクエストにより `publicPath` に変更が入っている。
+
+> feat(config, vue-app, vue-renderer): support dynamic `base` and `publicPath` by danielroe · Pull Request #8520 · nuxt/nuxt.js  
+> <https://github.com/nuxt/nuxt.js/pull/8520>
+
+> fix(vue-app): enable dynamic publicPath on server-side by danielroe · Pull Request #8759 · nuxt/nuxt.js  
+> <https://github.com/nuxt/nuxt.js/pull/8759>
+
+以下のイシューに期待。
+
+> Allow nuxt running from subfolder or `file://` protocol (like vue-cli 3 projects) · Issue #6133 · nuxt/nuxt.js  
+> <https://github.com/nuxt/nuxt.js/issues/6133>
+
+<hr />
+
 `generate` コマンドで書き出した静的ファイルをサーバーを起動せずにローカルで確認できるようにする設定。  
 ブラウザーのコンソールに以下のようなエラーが表示するが動作確認は可能。
 
