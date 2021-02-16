@@ -10,11 +10,11 @@
     "@nuxt/typescript-runtime": "2.0.1",
     "@nuxtjs/composition-api": "0.19.1",
     "core-js": "3.8.3",
-    "nuxt": "2.14.12"
+    "nuxt": "2.15.0"
   },
   "devDependencies": {
     "@fullhuman/postcss-purgecss": "4.0.0",
-    "@nuxt/types": "2.14.12",
+    "@nuxt/types": "2.15.0",
     "@nuxt/typescript-build": "2.0.4",
     "@nuxtjs/vuetify": "1.11.3"
   }
