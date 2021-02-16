@@ -7,7 +7,7 @@ export default defineComponent({
     const { x, y } = useMouse({ touch: false })
 
     return { x, y }
-  }
+  },
 })
 </script>
 

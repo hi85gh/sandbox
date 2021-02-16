@@ -13,10 +13,10 @@ export default Vue.extend({
         alert('Created default.vue: Redirect to index.')
 
         return this.$nuxt.context.redirect({
-          name: 'index'
+          name: 'index',
         })
       }
     }
-  }
+  },
 })
 </script>

@@ -15,6 +15,6 @@ export default Vue.extend({
     if (process.client) {
       alert('created')
     }
-  }
+  },
 })
 </script>
