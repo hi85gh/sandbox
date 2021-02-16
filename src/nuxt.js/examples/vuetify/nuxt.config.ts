@@ -1,6 +1,6 @@
-import type { NuxtConfig } from '@nuxt/types'
+import { defineNuxtConfig } from '@nuxtjs/composition-api'
 
-const config: NuxtConfig = {
+export default defineNuxtConfig({
   build: {
     postcss: {
       plugins: {
@@ -33,6 +33,4 @@ const config: NuxtConfig = {
     optionsPath: '~~/vuetify.options.ts',
     treeShake: true,
   },
-}
-
-export default config
+})

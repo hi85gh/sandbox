@@ -1,7 +1,7 @@
 <script lang="ts">
 import {
   defineComponent,
-  getCurrentInstance,
+  nextTick,
   onMounted,
   useMeta,
 } from '@nuxtjs/composition-api'
@@ -40,14 +40,14 @@ const head: MetaInfo = {
 }
 
 export default defineComponent({
-  setup(_, { root }) {
+  setup() {
     if (process.server) {
       /* <script> タグが 2 回追加されないよう Server side でのみ実行 */
       useMeta(head)
     }
 
     onMounted(async () => {
-      await root.$nextTick()
+      await nextTick()
 
       /* 追加した class を Client side で削除 */
       document.body.className = document.body.className.replace(
