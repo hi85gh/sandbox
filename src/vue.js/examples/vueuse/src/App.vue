@@ -1,18 +1,23 @@
 <script lang="ts">
 import { defineComponent } from 'vue'
-import UseLocalStorage from './components/UseLocalStorage.vue'
-import UseMouse from './components/UseMouse.vue'
+import LocalStorage from './components/LocalStorage.vue'
+import Mouse from './components/Mouse.vue'
 
 export default defineComponent({
   components: {
-    UseLocalStorage,
-    UseMouse,
+    LocalStorage,
+    Mouse,
   },
 })
 </script>
 
 <template>
   <h1>Hello Vue 3 + TypeScript + Vite</h1>
-  <UseLocalStorage />
-  <UseMouse />
+  <hr />
+  <a href="https://vueuse.org/core/useLocalStorage/">useLocalStorage</a>
+  <LocalStorage />
+
+  <hr />
+  <a href="https://vueuse.org/core/useMouse/">useMouse</a>
+  <Mouse />
 </template>
