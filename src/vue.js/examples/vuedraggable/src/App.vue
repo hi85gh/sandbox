@@ -1,7 +1,7 @@
 <script lang="ts">
 import { defineComponent } from 'vue'
-import Lists from './Lists.vue'
-import Simple from './Simple.vue'
+import Lists from './components/Lists.vue'
+import Simple from './components/Simple.vue'
 
 export default defineComponent({
   components: {
