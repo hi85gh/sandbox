@@ -1,11 +1,11 @@
 <script lang="ts">
 import { GroupOptions } from 'sortablejs'
 import { computed, defineComponent, reactive, toRefs } from 'vue'
-import draggable from 'vuedraggable'
+import VueDraggable from 'vuedraggable'
 
 export default defineComponent({
   components: {
-    draggable,
+    VueDraggable,
   },
   setup() {
     const state = reactive({
@@ -24,21 +24,21 @@ export default defineComponent({
 
 <template>
   <div class="container">
-    <draggable v-model="foo" group="group" item-key="id">
+    <VueDraggable v-model="foo" group="group" item-key="id">
       <template #item="{ element }">
         <div class="item">{{ element.list }}{{ element.id }}</div>
       </template>
-    </draggable>
-    <draggable v-model="bar" group="group" item-key="id">
+    </VueDraggable>
+    <VueDraggable v-model="bar" group="group" item-key="id">
       <template #item="{ element }">
         <div class="item">{{ element.list }}{{ element.id }}</div>
       </template>
-    </draggable>
-    <draggable v-model="baz" group="group" item-key="id">
+    </VueDraggable>
+    <VueDraggable v-model="baz" group="group" item-key="id">
       <template #item="{ element }">
         <div class="item">{{ element.list }}{{ element.id }}</div>
       </template>
-    </draggable>
+    </VueDraggable>
   </div>
 </template>
 

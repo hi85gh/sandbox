@@ -1,35 +1,11 @@
 <script lang="ts">
 import { computed, defineComponent, reactive } from 'vue'
-import draggable from 'vuedraggable'
-
-/**
- * vuedraggable change event
- * https://github.com/SortableJS/vue.draggable.next#events
- */
-type ChangeEvent<T = any> =
-  | {
-      added: {
-        newIndex: number
-        element: T
-      }
-    }
-  | {
-      removed: {
-        oldIndex: number
-        element: T
-      }
-    }
-  | {
-      moved: {
-        newIndex: number
-        oldIndex: number
-        element: T
-      }
-    }
+import VueDraggable from 'vuedraggable'
+import type { ChangeEvent } from 'vuedraggable'
 
 export default defineComponent({
   components: {
-    draggable,
+    VueDraggable,
   },
   setup() {
     const state = reactive({
@@ -54,11 +30,11 @@ export default defineComponent({
 </script>
 
 <template>
-  <draggable v-model="items" item-key="id" @change="onChange">
+  <VueDraggable v-model="items" item-key="id" @change="onChange">
     <template #item="{ element }">
       <div class="item">{{ element.id }}</div>
     </template>
-  </draggable>
+  </VueDraggable>
 </template>
 
 <style scoped>
