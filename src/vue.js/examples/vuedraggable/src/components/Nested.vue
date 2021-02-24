@@ -38,9 +38,5 @@ export default defineComponent({
 </script>
 
 <template>
-  <!--
-    Warning: list prop is updated by draggable component using splice method.
-    Reference: https://github.com/SortableJS/vue.draggable.next#list
-  -->
-  <Recursive :items="items" />
+  <Recursive v-model:items="items" />
 </template>
