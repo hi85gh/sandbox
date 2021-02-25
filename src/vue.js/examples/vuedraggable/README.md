@@ -10,6 +10,16 @@
   - v4: <https://github.com/SortableJS/vue.draggable.next/releases>
   - v2: <https://github.com/SortableJS/Vue.Draggable/releases>
 
+## Notes
+
+`list` プロパティはコンポーネント側で値が変更されてしまうため `list` プロパティは使用せず `modelValue` プロパティを使用する。  
+\*ネストされたリストで使用する場合は `change` イベントなどを使って配列を更新する処理が必要。
+
+> Alternative to the `modelValue` prop, list is an array to be synchronized with drag-and-drop.  
+> The main difference is that `list` prop is updated by draggable component using splice method, whereas `modelValue` is immutable.
+>
+> Reference: <https://github.com/SortableJS/vue.draggable.next#list>
+
 ## Issues
 
 ~~2020 年 11 月時点で vuedraggable は Vue.js v3 に未対応。~~  
