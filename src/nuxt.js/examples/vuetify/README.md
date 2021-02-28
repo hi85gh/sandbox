@@ -167,3 +167,47 @@ export default {
   },
 };
 ```
+
+## Issues
+
+### キー操作下における `VCombobox` コンポーネントのバグ
+
+`VCombobox` コンポーネントをキーで操作する場合はエラーを避けるため以下の対応が必要。  
+\*Vuetify `v2.3.23` と `v2.4.5` にて確認
+
+1.  `update:search-input` イベントで `search-input` の値に合わせ `items` に渡す選択肢の配列をフィルタリング
+2.  上記 `1` の対応で入力時の処理が重くなるため `useDebounceFn` 関数（vueuse）などを使用して負荷を軽減
+3.  `useDebounceFn` 関数内で `VCombobox` コンポーネントにアクセスし `setMenuIndex(-1)` を実行し `listIndex` の値をリセット
+
+補足:
+
+- マウスでクリックするなどキー操作をしなければ問題はない
+- 処理のタイミングが変わるため `VCombobox` コンポーネント内部の `filter` の処理は使用しない
+  - `no-filter` プロパティを追加
+- `update:search-input` イベントで遅延処理（`useDebounceFn` 関数など）をせず `setMenuIndex(-1)` を実行しても
+  `VCombobox` コンポーネント内部で `listIndex` の値が更新されるため問題は解消されない
+- 入力を確定するまで `input` イベントが発生しないため `update:search-input` を `input` イベントとして使用
+- 以下の issues が `VCombobox` コンポーネントにおいては解決されていないと思われる  
+  <https://github.com/vuetifyjs/vuetify/issues/7440>
+
+再現:
+
+例として `<VCombobox v-model="value" :items="['foo', 'bar', 'baz']" />` というコンポーネントを使用するものとする。
+
+1.  以下の操作で `VCombobox` コンポーネント内部でエラーが発生しすべての処理が停止する
+    1.  選択肢を表示
+    2.  アローキーを使用して末尾の `baz` を選択した状態にし `Enter` キーを押下
+    3.  1 文字削除し `bar` と `baz` が表示された状態にする
+    4.  そのまま `Enter` キーを押下すると `Cannot read property 'click' of undefined` のエラーが発生
+2.  以下の操作で値が直前に入力した値に上書きされてしまう
+    1.  選択肢を表示
+    2.  `bar` または `baz` を選択
+    3.  `Enter` キーを押下で確定
+    4.  `bar` を選んだ場合は `baz`、`baz` を選んだ場合は `bar` を選択
+    5.  そのまま `Enter` キーを押下で直前の値に上書きされる
+
+原因:
+
+- `VCombobox` コンポーネント内部で `VMenu` コンポーネントの `listIndex` の値が正しくリセットされていない
+  - `VCombobox` コンポーネントにアクセスし `getMenuIndex` 関数で確認
+  - プロパティの設定（`menu-props="auto"` の有無など）によっては再現手順が異なる
