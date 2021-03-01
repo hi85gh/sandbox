@@ -1,5 +1,4 @@
 import { defineComponent, h } from 'vue'
-import type { Prop } from 'vue'
 
 export default defineComponent({
   name: 'AppCheckbox',
@@ -8,7 +7,7 @@ export default defineComponent({
     modelValue: {
       type: Boolean,
       default: false,
-    } as Prop<boolean>,
+    },
   },
   emits: {
     'update:modelValue': (payload: boolean) => typeof payload === 'boolean',

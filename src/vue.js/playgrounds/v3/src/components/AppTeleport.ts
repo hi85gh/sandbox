@@ -1,5 +1,4 @@
 import { Teleport, defineComponent, h } from 'vue'
-import type { Prop } from 'vue'
 
 export default defineComponent({
   name: 'AppTeleport',
@@ -8,11 +7,11 @@ export default defineComponent({
     teleported: {
       type: Boolean,
       default: false,
-    } as Prop<boolean>,
+    },
     to: {
       type: String,
       required: true,
-    } as Prop<string>,
+    },
   },
   setup(props, { attrs, slots }) {
     return () =>

@@ -1,15 +1,16 @@
 import { defineComponent, h } from 'vue'
-import type { Prop } from 'vue'
 
 export default defineComponent({
   name: 'AppRadio',
   props: {
     modelValue: {
       type: String,
-    } as Prop<string>,
+      default: '',
+    },
     value: {
       type: String,
-    } as Prop<string>,
+      default: '',
+    },
   },
   emits: {
     'update:modelValue': (payload: string) => typeof payload === 'string',

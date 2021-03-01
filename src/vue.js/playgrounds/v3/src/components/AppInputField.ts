@@ -1,5 +1,5 @@
-import { defineComponent, h } from 'vue'
-import type { Prop } from 'vue'
+import { computed, defineComponent, h } from 'vue'
+import type { PropType } from 'vue'
 
 const allowTypes = [
   'date',
@@ -30,16 +30,16 @@ export default defineComponent({
   name: 'AppInputField',
   inheritAttrs: false,
   props: {
-    modelValue: {} as Prop<any>,
+    modelValue: {} as any,
     modelModifiers: {
-      type: Object,
-      required: false,
-    } as Prop<ModelModifiers>,
+      type: Object as PropType<ModelModifiers>,
+      default: () => ({}),
+    },
     type: {
-      type: String,
-      required: false,
+      type: String as PropType<AllowType>,
+      default: 'text',
       validator: (value: AllowType) => allowTypes.includes(value),
-    } as Prop<AllowType>,
+    },
   },
   emits: {
     'update:modelValue': (payload: string | number) =>
@@ -47,8 +47,8 @@ export default defineComponent({
       typeof payload === 'string' || typeof payload === 'number',
   },
   setup(props, { attrs, emit }) {
-    const modelModifiers: ModelModifiers = props.modelModifiers || {}
-    const type: AllowType = props.type || 'text'
+    const modelModifiers = computed(() => props.modelModifiers)
+    const type = computed(() => props.type)
 
     /**
      * 入力された文字列を数値に変換する関数。
@@ -63,10 +63,10 @@ export default defineComponent({
 
     function onChange(event: Event) {
       if (event.target instanceof HTMLInputElement) {
-        if (modelModifiers.trim && !modelModifiers.lazy) {
+        if (modelModifiers.value.trim && !modelModifiers.value.lazy) {
           emit('update:modelValue', event.target.value.trim())
-        } else if (modelModifiers.lazy) {
-          if (modelModifiers.number) {
+        } else if (modelModifiers.value.lazy) {
+          if (modelModifiers.value.number) {
             const convertedValue = convertValueToNumber(event.target.value)
 
             if (convertedValue) {
@@ -75,7 +75,7 @@ export default defineComponent({
             }
           }
 
-          if (modelModifiers.trim) {
+          if (modelModifiers.value.trim) {
             emit('update:modelValue', event.target.value.trim())
           } else {
             emit('update:modelValue', event.target.value)
@@ -85,8 +85,11 @@ export default defineComponent({
     }
 
     function onInput(event: Event) {
-      if (!modelModifiers.lazy && event.target instanceof HTMLInputElement) {
-        if (modelModifiers.number) {
+      if (
+        !modelModifiers.value.lazy &&
+        event.target instanceof HTMLInputElement
+      ) {
+        if (modelModifiers.value.number) {
           const convertedValue = convertValueToNumber(event.target.value)
 
           if (convertedValue) {
@@ -102,7 +105,7 @@ export default defineComponent({
     return () =>
       h('input', {
         ...attrs,
-        type,
+        type: type.value,
         value: props.modelValue,
         onChange,
         onInput,
