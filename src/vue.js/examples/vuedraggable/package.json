@@ -5,13 +5,13 @@
     "build": "vite build"
   },
   "dependencies": {
-    "vue": "3.0.5",
+    "vue": "3.0.7",
     "vuedraggable": "4.0.1"
   },
   "devDependencies": {
     "@types/sortablejs": "1.10.6",
     "@vitejs/plugin-vue": "1.1.5",
-    "@vue/compiler-sfc": "3.0.5",
+    "@vue/compiler-sfc": "3.0.7",
     "vite": "2.0.5"
   }
 }
