@@ -10,7 +10,7 @@
   },
   "devDependencies": {
     "@types/sortablejs": "1.10.6",
-    "@vitejs/plugin-vue": "1.1.4",
+    "@vitejs/plugin-vue": "1.1.5",
     "@vue/compiler-sfc": "3.0.5",
     "vite": "2.0.0-beta.69"
   }
