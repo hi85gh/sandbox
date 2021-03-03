@@ -1,26 +1,61 @@
-# Vue 3 + Typescript + Vite
+# vue-i18n
 
-This template should help get you started developing with Vue 3 and Typescript in Vite.
+- Official site:
+  - \>=v9: <https://vue-i18n.intlify.dev/>
+  - \<v9: <https://kazupon.github.io/vue-i18n/>
+- Repository:
+  - \>=v9: <https://github.com/intlify/vue-i18n-next>
+  - \<v9: <https://github.com/kazupon/vue-i18n>
+- Release notes:
+  - \>=v9: <https://github.com/intlify/vue-i18n-next/releases>
+  - \<v9: <https://github.com/kazupon/vue-i18n/releases>
+- Changelog:
+  - \>=v9: <https://github.com/intlify/vue-i18n-next/blob/master/CHANGELOG.md>
+  - \<v9: <https://github.com/kazupon/vue-i18n/blob/v8.x/CHANGELOG.md>
 
-## Recommended IDE Setup
+## Setup
 
-[VSCode](https://code.visualstudio.com/) + [Vetur](https://marketplace.visualstudio.com/items?itemName=octref.vetur). Make sure to enable `vetur.experimental.templateInterpolationService` in settings!
+```sh
+$ npm init @vitejs/app vue-i18n
 
-### If Using `<script setup>`
+Scaffolding project in src/vue.js/examples/vue-i18n...
+✔ Select a template: · vue-ts
 
-[`<script setup>`](https://github.com/vuejs/rfcs/pull/227) is a feature that is currently in RFC stage. To get proper IDE support for the syntax, use [Volar](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.volar) instead of Vetur (and disable Vetur).
+$ cd vue-i18n
 
-## Type Support For `.vue` Imports in TS
+$ npm install
 
-Since TypeScript cannot handle type information for `.vue` imports, they are shimmed to be a generic Vue component type by default. In most cases this is fine if you don't really care about component prop types outside of templates. However, if you wish to get actual prop types in `.vue` imports (for example to get props validation when using manual `h(...)` calls), you can use the following:
+$ node_modules/.bin/vite --version
+vite/2.0.5 darwin-x64 node-v14.16.0
 
-### If Using Volar
+$ npm install vue-i18n@next
+```
 
-Run `Volar: Switch TS Plugin on/off` from VSCode command palette.
+`src/main.ts`
 
-### If Using Vetur
+```diff
+import { createApp } from 'vue'
++import { createI18n } from 'vue-i18n'
+import App from './App.vue'
 
-1. Install and add `@vuedx/typescript-plugin-vue` to the [plugins section](https://www.typescriptlang.org/tsconfig#plugins) in `tsconfig.json`
-2. Delete `src/shims-vue.d.ts` as it is no longer needed to provide module info to Typescript
-3. Open `src/main.ts` in VSCode
-4. Open the VSCode command palette 5. Search and run "Select TypeScript version" -> "Use workspace version"
++const i18n = createI18n({
++  legacy: false,
++})
+
+-createApp(App).mount('#app')
++createApp(App).use(i18n).mount('#app')
+```
+
+## Notes
+
+### Composition API の使用
+
+vue-i18n を `setup` 関数内で使用するには `createI18n` 関数の `legacy` オプションに `false` を設定する。
+
+```ts
+const i18n = createI18n({
+  legacy: false,
+});
+```
+
+Reference: <https://vue-i18n-next.intlify.dev/guide/advanced/composition.html#basic-usage>
