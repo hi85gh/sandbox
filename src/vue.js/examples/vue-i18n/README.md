@@ -28,7 +28,7 @@ $ npm install
 $ node_modules/.bin/vite --version
 vite/2.0.5 darwin-x64 node-v14.16.0
 
-$ npm install vue-i18n@next
+$ npm install vue-i18n@next @intlify/vite-plugin-vue-i18n
 ```
 
 `src/main.ts`
@@ -46,6 +46,19 @@ import App from './App.vue'
 +createApp(App).use(i18n).mount('#app')
 ```
 
+`src/main.ts`
+
+```diff
+import { defineConfig } from 'vite'
+import vue from '@vitejs/plugin-vue'
++import vueI18n from '@intlify/vite-plugin-vue-i18n'
+
+export default defineConfig({
+-  plugins: [vue()],
++  plugins: [vue(), vueI18n()],
+})
+```
+
 ## Notes
 
 ### Composition API の使用
@@ -59,3 +72,27 @@ const i18n = createI18n({
 ```
 
 Reference: <https://vue-i18n-next.intlify.dev/guide/advanced/composition.html#basic-usage>
+
+\*@intlify/vite-plugin-vue-i18n の導入でも可
+
+### カスタムプロパティの使用
+
+`$i18n` や `$t` など vue-i18n のカスタムプロパティを `<template>` 内で使用するには `createI18n` 関数の `globalInjection` オプションに `true` を設定する。
+
+```ts
+const i18n = createI18n({
+  globalInjection: true,
+});
+```
+
+Composition API の `useI18n` 関数でもグローバルな値を参照することはできるため必須ではない。
+
+```ts
+const { locale } = useI18n({ useScope: "global" });
+```
+
+References:
+
+- <https://vue-i18n.intlify.dev/api/general.html#globalinjection>
+- <https://vue-i18n.intlify.dev/guide/advanced/composition.html#implicit-with-injected-properties-and-functions>
+- <https://vue-i18n.intlify.dev/api/injection.html#componentcustomproperties>
