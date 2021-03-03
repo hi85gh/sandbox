@@ -11,6 +11,16 @@ const i18n = createI18n({
    * @see {@link https://vue-i18n-next.intlify.dev/guide/advanced/composition.html#basic-usage Vue I18n}
    */
   legacy: false,
+
+  /**
+   * Implicitly inject into for each component
+   * @see {@link https://vue-i18n-next.intlify.dev/api/general.html#globalinjection Vue I18n}
+   */
+  globalInjection: true,
+  messages: {
+    en: { globalMessage: 'Hello, World!' },
+    ja: { globalMessage: 'こんにちは世界！' },
+  },
 })
 
 createApp(App).use(i18n).mount('#app')
