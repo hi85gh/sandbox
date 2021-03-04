@@ -44,3 +44,10 @@ export default Vue.extend({
   }
 })
 </script>
+
+<i18n>
+{
+  "en": { "greeting": "Local: Hello, World!" },
+  "ja": { "greeting": "Local: こんにちは世界！" }
+}
+</i18n>

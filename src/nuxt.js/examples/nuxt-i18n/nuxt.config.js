@@ -6,11 +6,8 @@ export default {
     locales: ['en', 'ja'],
     vueI18n: {
       fallbackLocale: 'en',
-      messages: {
-        en: { greeting: 'Hello, World!' },
-        ja: { greeting: 'こんにちは世界！' },
-      },
     },
+    vueI18nLoader: true,
   },
   modules: ['nuxt-i18n'],
   target: 'static',
