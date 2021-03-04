@@ -2,9 +2,11 @@
   "private": true,
   "scripts": {
     "dev": "nuxt",
+    "dev-no-prefix": "cross-env PREFIX_DISABLED=true npm run dev",
     "build": "nuxt build",
     "start": "nuxt start",
-    "generate": "nuxt generate"
+    "generate": "nuxt generate",
+    "generate-no-prefix": "cross-env PREFIX_DISABLED=true npm run generate"
   },
   "dependencies": {
     "core-js": "3.9.1",
@@ -13,6 +15,7 @@
   },
   "devDependencies": {
     "@nuxt/types": "2.15.2",
-    "@nuxt/typescript-build": "2.0.6"
+    "@nuxt/typescript-build": "2.0.6",
+    "cross-env": "7.0.3"
   }
 }

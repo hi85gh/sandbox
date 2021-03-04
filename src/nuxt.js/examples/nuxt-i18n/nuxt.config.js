@@ -8,6 +8,9 @@ export default {
       fallbackLocale: 'en',
     },
     vueI18nLoader: true,
+    ...(process.env.PREFIX_DISABLED === 'true'
+      ? { strategy: 'no_prefix' }
+      : {}),
   },
   modules: ['nuxt-i18n'],
   target: 'static',
