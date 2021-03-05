@@ -9,6 +9,7 @@
     "generate-no-prefix": "cross-env PREFIX_DISABLED=true npm run generate"
   },
   "dependencies": {
+    "@nuxtjs/composition-api": "0.21.0",
     "core-js": "3.9.1",
     "nuxt": "2.15.2",
     "nuxt-i18n": "6.20.3"

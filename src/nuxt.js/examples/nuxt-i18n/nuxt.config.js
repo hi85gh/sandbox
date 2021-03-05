@@ -1,5 +1,5 @@
 export default {
-  buildModules: ['@nuxt/typescript-build'],
+  buildModules: ['@nuxt/typescript-build', '@nuxtjs/composition-api'],
   components: true,
   i18n: {
     defaultLocale: 'en',
