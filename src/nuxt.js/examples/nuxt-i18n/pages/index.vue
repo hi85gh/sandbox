@@ -13,6 +13,14 @@
           </select>
         </p>
       </div>
+      <dl>
+        <dt>NuxtLinks:</dt>
+        <dd v-for="locale in availableLocales" :key="locale">
+          <NuxtLink :to="switchLocalePath(locale)">
+            {{ locale }}
+          </NuxtLink>
+        </dd>
+      </dl>
     </div>
   </div>
 </template>
@@ -22,6 +30,12 @@ import Vue from 'vue'
 
 export default Vue.extend({
   computed: {
+    availableLocales(): string[] {
+      return (this.$i18n.locales || []).reduce<string[]>((arr, locale) => {
+        const str = typeof locale === 'string' ? locale : locale.code
+        return str !== this.$i18n.locale ? [...arr, str] : arr
+      }, [])
+    },
     locales(): string[] {
       return (this.$i18n.locales || []).map(locale =>
         typeof locale === 'string' ? locale : locale.code
