@@ -4,9 +4,9 @@
       <h1>nuxt-i18n</h1>
       <p>{{ $t('greeting') }}</p>
       <div>
-        <p>Locale: {{ $i18n.locale }}</p>
+        <p>Locale: {{ locale }}</p>
         <p>
-          <select v-model="$i18n.locale">
+          <select v-model="locale">
             <option v-for="locale in locales" :key="locale">
               {{ locale }}
             </option>
@@ -26,20 +26,30 @@
 </template>
 
 <script lang="ts">
-import Vue from 'vue'
+import { computed, defineComponent, useContext } from '@nuxtjs/composition-api'
 
-export default Vue.extend({
-  computed: {
-    availableLocales(): string[] {
-      return (this.$i18n.locales || []).reduce<string[]>((arr, locale) => {
-        const str = typeof locale === 'string' ? locale : locale.code
-        return str !== this.$i18n.locale ? [...arr, str] : arr
-      }, [])
-    },
-    locales(): string[] {
-      return (this.$i18n.locales || []).map(locale =>
-        typeof locale === 'string' ? locale : locale.code
+export default defineComponent({
+  setup() {
+    const { app } = useContext()
+    const locale = computed({
+      get: () => app.i18n.locale,
+      set: value => {
+        app.i18n.locale = value
+      }
+    })
+    const locales = computed(() =>
+      (app.i18n.locales || []).map(value =>
+        typeof value === 'string' ? value : value.code
       )
+    )
+    const availableLocales = computed(() =>
+      locales.value.filter(value => value !== locale.value)
+    )
+
+    return {
+      availableLocales,
+      locale,
+      locales
     }
   }
 })
